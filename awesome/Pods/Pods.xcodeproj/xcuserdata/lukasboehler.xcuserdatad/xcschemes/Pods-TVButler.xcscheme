@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9E22A1C7E7102256CA4B5366"
+               BlueprintIdentifier = "03717E4EC376B3B7DCEADFC7"
                BuildableName = "libPods-TVButler.a"
                BlueprintName = "Pods-TVButler"
                ReferencedContainer = "container:Pods.xcodeproj">
