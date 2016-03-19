@@ -18,6 +18,7 @@
 		DF5C132F1C9DA540003475E4 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */; };
 		DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */; };
 		DF5C13351C9DA630003475E4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13341C9DA630003475E4 /* CardView.m */; };
+		DF5C13381C9DB66E003475E4 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13371C9DB66E003475E4 /* MainTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupInterestsViewController.m; sourceTree = "<group>"; };
 		DF5C13331C9DA630003475E4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		DF5C13341C9DA630003475E4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		DF5C13361C9DB66E003475E4 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		DF5C13371C9DB66E003475E4 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				DF5C13181C9D9F51003475E4 /* ViewController.m */,
 				DF5C13301C9DA56B003475E4 /* SetupInterestsViewController.h */,
 				DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */,
+				DF5C13361C9DB66E003475E4 /* MainTableViewController.h */,
+				DF5C13371C9DB66E003475E4 /* MainTableViewController.m */,
 				DF5C131A1C9D9F51003475E4 /* Main.storyboard */,
 				DF5C131D1C9D9F51003475E4 /* Assets.xcassets */,
 				DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */,
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5C13381C9DB66E003475E4 /* MainTableViewController.m in Sources */,
 				DF5C13191C9D9F51003475E4 /* ViewController.m in Sources */,
 				DF5C132E1C9DA540003475E4 /* YSLCardView.m in Sources */,
 				DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */,
@@ -355,6 +361,10 @@
 			baseConfigurationReference = 6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TVButler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.appwerkstatt.tvbuddy.TVButler;
@@ -367,6 +377,10 @@
 			baseConfigurationReference = C0B77733C6AA6AC93D94DE48 /* Pods-TVButler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TVButler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.appwerkstatt.tvbuddy.TVButler;

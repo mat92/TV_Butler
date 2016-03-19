@@ -65,36 +65,68 @@
             <objects>
                 <navigationController storyboardIdentifier="mainNavigationController" id="eHV-4t-j0q" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="haS-Rz-ZVN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="haS-Rz-ZVN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pKt-zu-5NL" kind="relationship" relationship="rootViewController" id="XxS-1W-zt0"/>
+                        <segue destination="Kbi-pp-Tfl" kind="relationship" relationship="rootViewController" id="q6q-MH-5s3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ut6-OG-w1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056" y="280"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Ol8-HT-aRk">
+        <!--Main Table View Controller-->
+        <scene sceneID="PK1-Zx-4cZ">
             <objects>
-                <viewController id="pKt-zu-5NL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CYe-bv-d52"/>
-                        <viewControllerLayoutGuide type="bottom" id="jye-kZ-UhA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BZw-Jl-bLP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                <tableViewController id="Kbi-pp-Tfl" customClass="MainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ImG-F1-VNh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xAm-4I-MZf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eLb-VI-Y4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="d9p-w5-zGL">
+                            <rect key="frame" x="0.0" y="64" width="320" height="164"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="butler_white_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qoo-EK-dq7">
+                                    <rect key="frame" x="125" y="8" width="70" height="68"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="9jz-DJ-eW0"/>
+                                        <constraint firstAttribute="height" constant="68" id="nxB-3c-wJ8"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="qoo-EK-dq7" firstAttribute="centerX" secondItem="d9p-w5-zGL" secondAttribute="centerX" id="fGj-vF-w6c"/>
+                                <constraint firstItem="qoo-EK-dq7" firstAttribute="top" secondItem="d9p-w5-zGL" secondAttribute="top" constant="8" id="m8a-zZ-VBI"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zaA-da-V4W">
+                                <rect key="frame" x="0.0" y="256" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zaA-da-V4W" id="p48-Jc-zoM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kbi-pp-Tfl" id="wqz-Ke-EAQ"/>
+                            <outlet property="delegate" destination="Kbi-pp-Tfl" id="igV-Qv-t8T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="aQj-Y3-QaN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="get-7e-fnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="280"/>
+            <point key="canvasLocation" x="1431" y="280"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="butler_white_logo" width="480" height="480"/>
+    </resources>
 </document>
