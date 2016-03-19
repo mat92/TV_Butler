@@ -14,6 +14,7 @@
 #import "tvShowTableViewCell.h"
 
 @interface MainTableViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 
 @end
 
@@ -25,6 +26,18 @@
     [self refreshTVShows];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    [self updateTime];
+    [NSTimer scheduledTimerWithTimeInterval: 60.0
+                                     target: self
+                                   selector: @selector(updateTime)
+                                   userInfo: nil
+                                    repeats: YES];
+}
+
+- (void)updateTime {
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh:mm"];
+    _currentTimeLabel.text = [NSString stringWithFormat: @"Heute, %@", [dateFormatter stringFromDate:[NSDate date]]];
 }
 
 - (void)refreshTVShows {
@@ -55,7 +68,7 @@
 }
 
 - (void)connectToTV:(Service *)service {
-    NSString * appUrl = @"http://apps.appwerkstatt.net/tvbuttler/TVButler";
+    NSString * appUrl = @"y9oM2n7YMl.tvbutler";
     NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
     Application * awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
