@@ -29,6 +29,9 @@
         logInViewController.signUpController.delegate = self;
         logInViewController.emailAsUsername = YES;
         logInViewController.delegate = self;
+        UIImageView *logo = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"butler_logo"]];
+        logo.contentMode=UIViewContentModeScaleAspectFit;
+        logInViewController.logInView.logo = logo;
         [self presentViewController:logInViewController animated: NO completion:nil];
     } else {
         // We are logged in. Go party!
