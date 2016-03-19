@@ -37,7 +37,7 @@
         // We are logged in. Go party!
         [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *user, NSError *error) {
             NSString * trainingDone = [user objectForKey: @"trainingDone"];
-            if(!trainingDone) {
+            if(trainingDone) {
                 UINavigationController * mainNavigationController = [self.storyboard instantiateViewControllerWithIdentifier: @"mainNavigationController"];
                 [self presentViewController: mainNavigationController animated: YES completion: nil];
             } else {

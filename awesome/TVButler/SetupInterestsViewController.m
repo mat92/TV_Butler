@@ -141,6 +141,7 @@
     
     PFUser *currentUser = [PFUser currentUser];
     currentUser[@"interests"] = _interests;
+    currentUser[@"trainingDone"] = @"YES";
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"Interests successfuly saved to Parse");
