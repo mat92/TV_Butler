@@ -144,6 +144,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-7F-nzF">
                                                     <rect key="frame" x="0.0" y="0.5" width="304" height="172.5"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-OJ-TOH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="10" height="173"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3M0-ZP-inq">
                                                     <rect key="frame" x="0.0" y="131" width="304" height="42"/>
                                                     <subviews>
@@ -190,6 +194,7 @@
                                     <outlet property="containerView" destination="EAp-ck-SgN" id="suh-o1-cRZ"/>
                                     <outlet property="imageView" destination="2ba-7F-nzF" id="dvb-Tm-4wj"/>
                                     <outlet property="label" destination="YFh-RA-30g" id="1XW-fh-L8e"/>
+                                    <outlet property="progressView" destination="d3h-OJ-TOH" id="h5b-PV-UzJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

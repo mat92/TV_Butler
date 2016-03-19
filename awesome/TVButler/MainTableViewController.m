@@ -147,6 +147,7 @@
     cell.label.text = [currentTVShow objectForKey: @"name"];
     [cell.imageView setImageWithURL: [NSURL URLWithString: [currentTVShow objectForKey: @"image_url"]]];
     cell.containerView.layer.cornerRadius = 5.0;
+    cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, cell.containerView.frame.size.height);
     
     return cell;
 }

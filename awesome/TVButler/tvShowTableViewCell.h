@@ -13,5 +13,6 @@
 @property IBOutlet UIImageView * imageView;
 @property IBOutlet UILabel * label;
 @property IBOutlet UIView * containerView;
+@property IBOutlet UIView * progressView;
 
 @end
