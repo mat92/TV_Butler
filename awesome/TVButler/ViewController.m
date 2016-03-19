@@ -33,7 +33,6 @@
         logo.contentMode=UIViewContentModeScaleAspectFit;
         logInViewController.logInView.logo = logo;
         
-        
         UIImageView *logoA = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"butler_logo"]];
         logoA.contentMode=UIViewContentModeScaleAspectFit;
         logInViewController.signUpController.signUpView.logo = logoA;

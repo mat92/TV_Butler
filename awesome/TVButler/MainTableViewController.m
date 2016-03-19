@@ -9,7 +9,9 @@
 #import "MainTableViewController.h"
 #import "DevicesTableViewController.h"
 #import <BIZPopupView/BIZPopupViewController.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 #import <Parse/Parse.h>
+#import "tvShowTableViewCell.h"
 
 @interface MainTableViewController ()
 
@@ -91,9 +93,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController.navigationBar setBackgroundImage: [UIImage new] forBarMetrics:UIBarMetricsDefault];
+    /*[self.navigationController.navigationBar setBackgroundImage: [UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = YES;*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,10 +114,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tvShowCell" forIndexPath:indexPath];
+    tvShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tvShowCell" forIndexPath:indexPath];
+    
+    NSDictionary * currentTVShow = [myTVShows objectAtIndex: indexPath.row];
     
     // Configure the cell...
-    
+    cell.label.text = [currentTVShow objectForKey: @"name"];
+    [cell.imageView setImageWithURL: [NSURL URLWithString: [currentTVShow objectForKey: @"image_url"]]];
+    cell.containerView.layer.cornerRadius = 5.0;
     
     return cell;
 }

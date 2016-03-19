@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *datas;
 @property (nonatomic, strong) NSMutableArray * interests;
 @property (nonatomic, strong) NSMutableArray * genres;
+@property (nonatomic, strong) NSMutableArray * tvShows;
 @end
 
 @implementation SetupInterestsViewController
@@ -35,6 +36,7 @@
     
     _interests = [[NSMutableArray alloc] init];
     _genres = [[NSMutableArray alloc] init];
+    _tvShows = [[NSMutableArray alloc] init];
     _container = [[YSLDraggableCardContainer alloc]init];
     double topSpacing = 80.0;
     _container.frame = CGRectMake(0, topSpacing, self.view.frame.size.width, self.view.frame.size.height - topSpacing);
@@ -58,6 +60,7 @@
             @try {
                 NSDictionary *dict = @{@"image" : [[[currentTVShow objectForKey: @"images"] objectAtIndex: 0] objectForKey: @"url"],
                                        @"name" : [[currentTVShow objectForKey: @"titles"] objectForKey: @"default"],
+                                       @"seven_id" : [currentTVShow objectForKey: @"id"],
                                        @"genres" : [currentTVShow objectForKey: @"genres"],
                                        @"keywords": [[currentTVShow objectForKey: @"keywords"] objectForKey: @"MX"]
                                        };
@@ -117,7 +120,6 @@
 
         }
         
-        
         NSArray * interestsArr = [currentObject objectForKey: @"keywords"];
         for(int i = 0; i < interestsArr.count; i++) {
             NSDictionary *dict = @{
@@ -126,6 +128,14 @@
                                    };
             [_interests addObject: dict];
         }
+        
+        NSDictionary *tvShowObj = @{
+                               @"name" : [currentObject objectForKey: @"name"],
+                               @"image_url" : [currentObject objectForKey: @"image"],
+                               @"seven_id" : [currentObject objectForKey: @"seven_id"],
+                               @"score" : @0,
+                               };
+        [_tvShows addObject: tvShowObj];
     }
 }
 
@@ -156,6 +166,7 @@
     PFUser *currentUser = [PFUser currentUser];
     currentUser[@"genres"] = _genres;
     currentUser[@"interests"] = _interests;
+    currentUser[@"tvShows"] = _tvShows;
     currentUser[@"trainingDone"] = @"YES";
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
