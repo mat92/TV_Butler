@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SmartView/SmartView.h>
 
-@interface MainTableViewController : UITableViewController
+@interface MainTableViewController : UITableViewController <ServiceSearchDelegate> {
+    ServiceSearch * samsungSearch;
+}
 
 @end

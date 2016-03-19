@@ -7,7 +7,6 @@
 //
 
 #import "MainTableViewController.h"
-#import <SmartView/SmartView.h>
 
 @interface MainTableViewController ()
 
@@ -19,6 +18,39 @@
     [super viewDidLoad];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    [self start];
+}
+
+- (void)start {
+    samsungSearch = [Service search];
+    samsungSearch.delegate = self;
+    [samsungSearch start];
+}
+
+- (void)onServiceFound:(Service *)service {
+    /* YOLO! */
+    NSLog(@"%@", service);
+}
+
+- (void)onServiceLost:(Service *)service {
+    
+}
+
+- (void)connectToTV:(Service *)service {
+    NSURL * appUrl = [NSURL URLWithString: @""];
+    NSString * channelID = @"";
+    
+    Application * awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
+    awesomeApplication.connectionTimeout = 5.0;
+    [awesomeApplication start:^(BOOL success, NSError * _Nullable error) {
+        // YEP?
+        if(success) {
+            
+        } else {
+            // FUCK?
+        }
+    }];
 }
 
 - (BOOL)canBecomeFirstResponder
