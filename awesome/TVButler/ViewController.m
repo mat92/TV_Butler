@@ -27,7 +27,7 @@
         logInViewController.signUpController.emailAsUsername = YES;
         logInViewController.emailAsUsername = YES;
         logInViewController.delegate = self;
-        [self presentViewController:logInViewController animated:YES completion:nil];
+        [self presentViewController:logInViewController animated: NO completion:nil];
     } else {
         // We are logged in. Go party!
     }
