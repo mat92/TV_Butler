@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SetupInterestsViewController.h"
 
 @interface ViewController ()
 
@@ -31,6 +32,11 @@
         [self presentViewController:logInViewController animated: NO completion:nil];
     } else {
         // We are logged in. Go party!
+        
+        SetupInterestsViewController * setupInterestView = [self.storyboard instantiateViewControllerWithIdentifier: @"setupInterestView"];
+        [self presentViewController: setupInterestView animated: YES completion:^{
+            
+        }];
     }
 }
 

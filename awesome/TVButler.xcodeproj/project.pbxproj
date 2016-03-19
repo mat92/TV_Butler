@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0043336E772F828D2F2E3890 /* libPods-TVButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1C0D0BF79F855A724608C /* libPods-TVButler.a */; };
 		DF5C13131C9D9F51003475E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13121C9D9F51003475E4 /* main.m */; };
 		DF5C13161C9D9F51003475E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13151C9D9F51003475E4 /* AppDelegate.m */; };
 		DF5C13191C9D9F51003475E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13181C9D9F51003475E4 /* ViewController.m */; };
 		DF5C131C1C9D9F51003475E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5C131A1C9D9F51003475E4 /* Main.storyboard */; };
 		DF5C131E1C9D9F51003475E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5C131D1C9D9F51003475E4 /* Assets.xcassets */; };
 		DF5C13211C9D9F51003475E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */; };
-		E8E895789FA720E0EC32B432 /* libPods-TVButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E0EF1B59813DF9C2D4CE5 /* libPods-TVButler.a */; };
+		DF5C132E1C9DA540003475E4 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C132B1C9DA540003475E4 /* YSLCardView.m */; };
+		DF5C132F1C9DA540003475E4 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */; };
+		DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */; };
+		DF5C13351C9DA630003475E4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13341C9DA630003475E4 /* CardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVButler/Pods-TVButler.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B1C0D0BF79F855A724608C /* libPods-TVButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B77733C6AA6AC93D94DE48 /* Pods-TVButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVButler/Pods-TVButler.release.xcconfig"; sourceTree = "<group>"; };
 		DF5C130E1C9D9F50003475E4 /* TVButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5C13121C9D9F51003475E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -29,7 +34,14 @@
 		DF5C131D1C9D9F51003475E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF5C13201C9D9F51003475E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF5C13221C9D9F51003475E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F18E0EF1B59813DF9C2D4CE5 /* libPods-TVButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF5C132A1C9DA540003475E4 /* YSLCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCardView.h; sourceTree = "<group>"; };
+		DF5C132B1C9DA540003475E4 /* YSLCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCardView.m; sourceTree = "<group>"; };
+		DF5C132C1C9DA540003475E4 /* YSLDraggableCardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLDraggableCardContainer.h; sourceTree = "<group>"; };
+		DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLDraggableCardContainer.m; sourceTree = "<group>"; };
+		DF5C13301C9DA56B003475E4 /* SetupInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupInterestsViewController.h; sourceTree = "<group>"; };
+		DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupInterestsViewController.m; sourceTree = "<group>"; };
+		DF5C13331C9DA630003475E4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		DF5C13341C9DA630003475E4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E895789FA720E0EC32B432 /* libPods-TVButler.a in Frameworks */,
+				0043336E772F828D2F2E3890 /* libPods-TVButler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +68,7 @@
 		C4458C65658D2318DDF62221 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F18E0EF1B59813DF9C2D4CE5 /* libPods-TVButler.a */,
+				A2B1C0D0BF79F855A724608C /* libPods-TVButler.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +98,8 @@
 				DF5C13151C9D9F51003475E4 /* AppDelegate.m */,
 				DF5C13171C9D9F51003475E4 /* ViewController.h */,
 				DF5C13181C9D9F51003475E4 /* ViewController.m */,
+				DF5C13301C9DA56B003475E4 /* SetupInterestsViewController.h */,
+				DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */,
 				DF5C131A1C9D9F51003475E4 /* Main.storyboard */,
 				DF5C131D1C9D9F51003475E4 /* Assets.xcassets */,
 				DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */,
@@ -98,9 +112,23 @@
 		DF5C13111C9D9F51003475E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF5C13291C9DA540003475E4 /* YSLDraggableCardContainer */,
 				DF5C13121C9D9F51003475E4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF5C13291C9DA540003475E4 /* YSLDraggableCardContainer */ = {
+			isa = PBXGroup;
+			children = (
+				DF5C13331C9DA630003475E4 /* CardView.h */,
+				DF5C13341C9DA630003475E4 /* CardView.m */,
+				DF5C132A1C9DA540003475E4 /* YSLCardView.h */,
+				DF5C132B1C9DA540003475E4 /* YSLCardView.m */,
+				DF5C132C1C9DA540003475E4 /* YSLDraggableCardContainer.h */,
+				DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */,
+			);
+			path = YSLDraggableCardContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +237,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF5C13191C9D9F51003475E4 /* ViewController.m in Sources */,
+				DF5C132E1C9DA540003475E4 /* YSLCardView.m in Sources */,
+				DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */,
 				DF5C13161C9D9F51003475E4 /* AppDelegate.m in Sources */,
+				DF5C132F1C9DA540003475E4 /* YSLDraggableCardContainer.m in Sources */,
 				DF5C13131C9D9F51003475E4 /* main.m in Sources */,
+				DF5C13351C9DA630003475E4 /* CardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
