@@ -35,10 +35,17 @@
         [self presentViewController:logInViewController animated: NO completion:nil];
     } else {
         // We are logged in. Go party!
-        
-        SetupInterestsViewController * setupInterestView = [self.storyboard instantiateViewControllerWithIdentifier: @"setupInterestView"];
-        [self presentViewController: setupInterestView animated: YES completion:^{
-            
+        [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *user, NSError *error) {
+            NSString * trainingDone = [user objectForKey: @"trainingDone"];
+            if(!trainingDone) {
+                UINavigationController * mainNavigationController = [self.storyboard instantiateViewControllerWithIdentifier: @"mainNavigationController"];
+                [self presentViewController: mainNavigationController animated: YES completion: nil];
+            } else {
+                SetupInterestsViewController * setupInterestView = [self.storyboard instantiateViewControllerWithIdentifier: @"setupInterestView"];
+                [self presentViewController: setupInterestView animated: YES completion:^{
+                    
+                }];
+            }
         }];
     }
 }
