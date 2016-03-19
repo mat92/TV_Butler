@@ -111,12 +111,7 @@ function getCurrentChannel() {
 }
 
 function printCurrentChannel() {
-	try {
 	var currentChannel = getCurrentChannel();
-	}
-	catch(error) {
-		console.log(error);
-	}
 	
 	if(currentChannel != null) {
 		var currentChannelDiv = document.getElementById("currentChannel");

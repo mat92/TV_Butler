@@ -111,31 +111,17 @@ function getCurrentChannel() {
 }
 
 function printCurrentChannel() {
-	try {
-	var currentChannel = getCurrentChannel();
-	}
-	catch(error) {
-		console.log(error);
-	}
+	var currentChannelDiv = document.getElementById("currentChannel");
 	
-	if(currentChannel != null) {
-		var currentChannelDiv = document.getElementById("currentChannel");
-		
-		
-		
-		var p = document.createElement("p");
-		var text = document.createTextNode(
-				  "channelName: " + currentChannel.channelName +
-				  "major: " + currentChannel.major +
-				  "minor: " + currentChannel.minor
-		  );
-		
-		p.appendChild(text);
-		currentChannelDiv.appendChild(p);
-		
-		console.log("current channel found")
-	}
-	else {
-		console.log("error retreiving the current channel!");
-	}
+	var currentChannel = getCurrentChannel();
+	
+	var p = document.createElement("p");
+	var text = document.createTextNode(
+			  "channelName: " + currentChannel.channelName +
+			  "major: " + currentChannel.major +
+			  "minor: " + currentChannel.minor
+	  );
+	
+	p.appendChild(text);
+	currentChannelDiv.appendChild(p);
 }

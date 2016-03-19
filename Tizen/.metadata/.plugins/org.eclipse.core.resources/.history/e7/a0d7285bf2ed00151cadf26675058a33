@@ -11,7 +11,10 @@
     <script src="js/main.js"></script>
 </head>
 
-<body style="background-color:transparent;">
+<body style="opacity:0.7; /* allgemein */
+-moz-opacity:0.7; /* Mozilla */
+-khtml-opacity:0.7; /* KTHML */
+-opera-opacity:0.7; /* Opera */">
   <header>
     <hgroup>
       <h1>Tizen app</h1>
@@ -33,7 +36,7 @@
         <img src="images/tizen_32.png" width="32"/> Application Name
       </h1>
     </header>
-    <!--<p style="font-size:40px;">This is an empty template of Tizen Web Application. Tizen will support multiple device categories:</p>
+    <p style="font-size:40px;">This is an empty template of Tizen Web Application. Tizen will support multiple device categories:</p>
     <ul>
       <li style="font-size:40px;">smartphones, tablets and smart TVs
       <li style="font-size:40px;">netbooks, in-vehicle infotainment devices
@@ -44,18 +47,6 @@
       <div id="divbutton1" style="font-size:40px;">
         <button onclick="startTime();" style="font-size:50px;">Clock</button>
       </div>
-    </section>-->
-    <section>
-    	<button onclick="getChannels();">Get Channels</button>
-    </section>
-    <section>
-    	<div id="channelList" style="color: white;">
-    	</div>
-    </section>
-    <section>
-    	<div id="currentChannel" style="color: white;">
-    		<button onclick="printCurrentChannel();">Get Current Channel</button>
-    	</div>
     </section>
   </article>
 

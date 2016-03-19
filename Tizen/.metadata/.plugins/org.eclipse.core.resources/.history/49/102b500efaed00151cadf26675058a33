@@ -49,12 +49,7 @@
     	<button onclick="getChannels();">Get Channels</button>
     </section>
     <section>
-    	<div id="channelList" style="color: white;">
-    	</div>
-    </section>
-    <section>
-    	<div id="currentChannel" style="color: white;">
-    		<button onclick="printCurrentChannel();">Get Current Channel</button>
+    	<div id="channelList">
     	</div>
     </section>
   </article>

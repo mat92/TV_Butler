@@ -75,11 +75,7 @@ function channelCB(channels) {
   var channelDiv = document.getElementById("channelList");
   for(i = 0; i < channels.length; i++) {
 	  var p = document.createElement("p");
-	  var text = document.createTextNode(
-			  "channelName: " + channels[i].channelName +
-			  "major: " + channels[i].major +
-			  "minor: " + channels[i].minor
-	  );
+	  var text = document.createTextNode(channels[i]);
 	  
 	  p.appendChild(text);
 	  channelDiv.appendChild(p);
@@ -104,38 +100,4 @@ function getChannels() {
 	  } catch (error) {
 	      console.log("Error name = "+ error.name + ", Error message = " + error.message);
 	  } 
-}
-
-function getCurrentChannel() {
-	return tizen.tvchannel.getCurrentChannel();
-}
-
-function printCurrentChannel() {
-	try {
-	var currentChannel = getCurrentChannel();
-	}
-	catch(error) {
-		console.log(error);
-	}
-	
-	if(currentChannel != null) {
-		var currentChannelDiv = document.getElementById("currentChannel");
-		
-		
-		
-		var p = document.createElement("p");
-		var text = document.createTextNode(
-				  "channelName: " + currentChannel.channelName +
-				  "major: " + currentChannel.major +
-				  "minor: " + currentChannel.minor
-		  );
-		
-		p.appendChild(text);
-		currentChannelDiv.appendChild(p);
-		
-		console.log("current channel found")
-	}
-	else {
-		console.log("error retreiving the current channel!");
-	}
 }

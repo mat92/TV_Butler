@@ -53,7 +53,7 @@
     	</div>
     </section>
     <section>
-    	<div id="currentChannel" style="color: white;">
+    	<div id="currentChannel">
     		<button onclick="printCurrentChannel();">Get Current Channel</button>
     	</div>
     </section>
