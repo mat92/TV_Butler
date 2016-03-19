@@ -19,8 +19,23 @@
 		DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */; };
 		DF5C13351C9DA630003475E4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13341C9DA630003475E4 /* CardView.m */; };
 		DF5C13381C9DB66E003475E4 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13371C9DB66E003475E4 /* MainTableViewController.m */; };
-		DF5C133C1C9DBED1003475E4 /* SmartView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5C133B1C9DBED1003475E4 /* SmartView.framework */; };
+		DF5C133E1C9DC2E3003475E4 /* SmartView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5C133D1C9DC2E3003475E4 /* SmartView.framework */; };
+		DF5C133F1C9DC2E3003475E4 /* SmartView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF5C133D1C9DC2E3003475E4 /* SmartView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF5C13401C9DC2E3003475E4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF5C133F1C9DC2E3003475E4 /* SmartView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVButler/Pods-TVButler.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +61,7 @@
 		DF5C13341C9DA630003475E4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		DF5C13361C9DB66E003475E4 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		DF5C13371C9DB66E003475E4 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
-		DF5C133B1C9DBED1003475E4 /* SmartView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartView.framework; sourceTree = "<group>"; };
+		DF5C133D1C9DC2E3003475E4 /* SmartView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0043336E772F828D2F2E3890 /* libPods-TVButler.a in Frameworks */,
-				DF5C133C1C9DBED1003475E4 /* SmartView.framework in Frameworks */,
+				DF5C133E1C9DC2E3003475E4 /* SmartView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +97,7 @@
 		DF5C13051C9D9F50003475E4 = {
 			isa = PBXGroup;
 			children = (
-				DF5C133B1C9DBED1003475E4 /* SmartView.framework */,
+				DF5C133D1C9DC2E3003475E4 /* SmartView.framework */,
 				DF5C13101C9D9F51003475E4 /* TVButler */,
 				DF5C130F1C9D9F50003475E4 /* Products */,
 				64A15B92671216E46A5B0657 /* Pods */,
@@ -152,6 +167,7 @@
 				DF5C130B1C9D9F50003475E4 /* Frameworks */,
 				DF5C130C1C9D9F50003475E4 /* Resources */,
 				964DE2E50F7822BC8279E81E /* Copy Pods Resources */,
+				DF5C13401C9DC2E3003475E4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +381,7 @@
 			baseConfigurationReference = 6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -381,6 +398,7 @@
 			baseConfigurationReference = C0B77733C6AA6AC93D94DE48 /* Pods-TVButler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
