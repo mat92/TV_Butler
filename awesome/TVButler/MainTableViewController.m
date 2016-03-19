@@ -12,6 +12,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <Parse/Parse.h>
 #import "tvShowTableViewCell.h"
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @interface MainTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
@@ -32,6 +33,17 @@
                                    selector: @selector(updateTime)
                                    userInfo: nil
                                     repeats: YES];
+}
+
+- (void)loadCurrentTVShows {
+    /* http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter?numberOfResults=100&filter={%22criteria%22:[{%22term%22:%22publishedStartDateTime%22,%22operator%22:%22atLeast%22,%22value%22:%222016-03-19T18:00:00Z%22},{%22term%22:%22publishedStartDateTime%22,%22operator%22:%22atMost%22,%22value%22:%222016-03-19T22:00:00Z%22},{%22term%22:%22sourceName%22,%22operator%22:%22in%22,%22values%22:[%22RTL%22,%22ProSieben%22]}],%22operator%22:%22and%22}&api_key=240e4458fc4c6ac85c290481646b21ef */
+    NSString * sevenHackApiURLRequest = @"";
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET: sevenHackApiURLRequest parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)updateTime {
