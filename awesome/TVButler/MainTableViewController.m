@@ -7,6 +7,7 @@
 //
 
 #import "MainTableViewController.h"
+#import <SmartView/SmartView.h>
 
 @interface MainTableViewController ()
 
@@ -34,7 +35,7 @@
 }
 
 - (void)zapZap {
-    NSLog(@"Party hard.");
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
