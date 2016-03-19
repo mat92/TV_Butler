@@ -11,12 +11,14 @@
 #import "CardView.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <Parse/Parse.h>
 
 #define RGB(r, g, b)     [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha : 1]
 
 @interface SetupInterestsViewController () <YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource>
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
 @property (nonatomic, strong) NSMutableArray *datas;
+@property (nonatomic, strong) NSMutableArray * interests;
 @end
 
 @implementation SetupInterestsViewController
@@ -30,6 +32,7 @@
 {
     [super viewDidLoad];
     
+    _interests = [[NSMutableArray alloc] init];
     _container = [[YSLDraggableCardContainer alloc]init];
     double topSpacing = 80.0;
     _container.frame = CGRectMake(0, topSpacing, self.view.frame.size.width, self.view.frame.size.height - topSpacing);
@@ -39,7 +42,7 @@
     _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight;
     [self.view addSubview:_container];
     
-    NSString * sevenHackApiURLRequest = @"http://api.7hack.de:80/v1/tvshows?apikey=9VeEdUMw&selection=%7BtotalCount%2Cdata%7Bid%2Ctitles%7Bdefault%7D%2Ckeyworkds%7Bdefault%7D%2Cgenres%2Cimages%28subType%3A%22Cover%20Big%22%29%7Burl%2CsubType%7D%7D%7D";
+    NSString * sevenHackApiURLRequest = @"http://api.7hack.de:80/v1/tvshows?apikey=9VeEdUMw&selection=%7BtotalCount%2Cdata%7Bid%2Ctitles%7Bdefault%7D%2Ckeywords%7BMX%7D%2Cgenres%2Cimages%28subType%3A%22Cover%20Big%22%29%7Burl%2CsubType%7D%7D%7D";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET: sevenHackApiURLRequest parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
@@ -52,7 +55,10 @@
             
             @try {
                 NSDictionary *dict = @{@"image" : [[[currentTVShow objectForKey: @"images"] objectAtIndex: 0] objectForKey: @"url"],
-                                       @"name" : [[currentTVShow objectForKey: @"titles"] objectForKey: @"default"]};
+                                       @"name" : [[currentTVShow objectForKey: @"titles"] objectForKey: @"default"],
+                                       @"genres" : [currentTVShow objectForKey: @"genres"],
+                                       @"keywords": [[currentTVShow objectForKey: @"keywords"] objectForKey: @"MX"]
+                                       };
                 [_datas addObject:dict];
             }
             @catch (NSException *exception) {
@@ -89,11 +95,23 @@
     if (draggableDirection == YSLDraggableDirectionLeft) {
         [cardContainerView movePositionWithDirection:draggableDirection
                                          isAutomatic:NO];
+
+        
     }
     
     if (draggableDirection == YSLDraggableDirectionRight) {
         [cardContainerView movePositionWithDirection:draggableDirection
                                          isAutomatic:NO];
+        NSDictionary * currentObject = [_datas objectAtIndex: index];
+        
+        NSArray * interestsArr = [currentObject objectForKey: @"keywords"];
+        for(int i = 0; i < interestsArr.count; i++) {
+            NSDictionary *dict = @{
+                                   @"interest" : [interestsArr objectAtIndex: i],
+                                   @"score" : @1
+                                   };
+            [_interests addObject: dict];
+        }
     }
 }
 
@@ -120,8 +138,18 @@
 {
     NSLog(@"++ Did CompleteAll");
     // Save interests and go for it.
+    
+    PFUser *currentUser = [PFUser currentUser];
+    currentUser[@"interests"] = _interests;
+    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Interests successfuly saved to Parse");
+        } else {
+            NSLog(@"Cant save interests to Parse");
+        }
+    }];
 }
-          
+
 - (void)cardContainerView:(YSLDraggableCardContainer *)cardContainerView didSelectAtIndex:(NSInteger)index draggableView:(UIView *)draggableView {
         NSLog(@"++ Tap card index : %ld",(long)index);
 }
