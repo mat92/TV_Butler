@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.tizen.web.tv.sec.nacl.launch.deviceLaunchConfigurationType">
+<stringAttribute key="org.tizen.web.tv.sec.nacl.launch.EMULATOR_INSTANCE" value="emulator-26101"/>
+<booleanAttribute key="org.tizen.web.tv.sec.nacl.launch.GENERATE_WIDGET" value="true"/>
+<stringAttribute key="org.tizen.web.tv.sec.nacl.launch.PROJECT_NAME" value=""/>
+<stringAttribute key="org.tizen.web.tv.sec.nacl.launch.WIDGET_PATH" value=""/>
+</launchConfiguration>
