@@ -19,6 +19,7 @@
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
 @property (nonatomic, strong) NSMutableArray *datas;
 @property (nonatomic, strong) NSMutableArray * interests;
+@property (nonatomic, strong) NSMutableArray * genres;
 @end
 
 @implementation SetupInterestsViewController
@@ -33,6 +34,7 @@
     [super viewDidLoad];
     
     _interests = [[NSMutableArray alloc] init];
+    _genres = [[NSMutableArray alloc] init];
     _container = [[YSLDraggableCardContainer alloc]init];
     double topSpacing = 80.0;
     _container.frame = CGRectMake(0, topSpacing, self.view.frame.size.width, self.view.frame.size.height - topSpacing);
@@ -104,6 +106,18 @@
                                          isAutomatic:NO];
         NSDictionary * currentObject = [_datas objectAtIndex: index];
         
+        NSArray * genresArr = [currentObject objectForKey:@"genres"];
+        for (int i = 0; i < genresArr.count;i++ ) {
+            NSDictionary *dict2 = @{
+                                   @"genres" : [genresArr objectAtIndex: i],
+                                   @"score" : @1
+                                   
+                                   };
+            [_genres addObject: dict2];
+
+        }
+        
+        
         NSArray * interestsArr = [currentObject objectForKey: @"keywords"];
         for(int i = 0; i < interestsArr.count; i++) {
             NSDictionary *dict = @{
@@ -140,6 +154,7 @@
     // Save interests and go for it.
     
     PFUser *currentUser = [PFUser currentUser];
+    currentUser[@"genres"] = _genres;
     currentUser[@"interests"] = _interests;
     currentUser[@"trainingDone"] = @"YES";
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
