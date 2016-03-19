@@ -24,6 +24,8 @@
     
     if(![PFUser currentUser]) {
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        logInViewController.signUpController.emailAsUsername = YES;
+        logInViewController.emailAsUsername = YES;
         logInViewController.delegate = self;
         [self presentViewController:logInViewController animated:YES completion:nil];
     } else {
