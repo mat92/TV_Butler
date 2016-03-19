@@ -6,6 +6,7 @@ target 'TVButler' do
 pod 'Parse'
 pod 'ParseUI'
 pod 'AFNetworking', '~> 3.0'
+pod 'BIZPopupView'
 
 end
 

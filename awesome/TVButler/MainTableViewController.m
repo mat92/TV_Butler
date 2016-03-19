@@ -7,6 +7,9 @@
 //
 
 #import "MainTableViewController.h"
+#import "DevicesTableViewController.h"
+#import <BIZPopupView/BIZPopupViewController.h>
+#import <Parse/Parse.h>
 
 @interface MainTableViewController ()
 
@@ -16,37 +19,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    myTVShows = [[NSMutableArray alloc] init];
+    [self refreshTVShows];
     
     [self setNeedsStatusBarAppearanceUpdate];
-    
-    [self start];
 }
 
-- (void)start {
+- (void)refreshTVShows {
+    [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *user, NSError *error) {
+        if([user objectForKey: @"tvShows"]) {
+            myTVShows = [user objectForKey: @"tvShows"];
+            [self.tableView reloadData];
+        }
+    }];
+}
+
+- (IBAction)start:(id)sender {
     samsungSearch = [Service search];
     samsungSearch.delegate = self;
     [samsungSearch start];
+    
+    [Service getByURI: @"http://10.100.105.182:8001/api/v2/" timeout:5.0 completionHandler:^(Service * _Nullable service, NSError * _Nullable error) {
+        if(service) {
+            [self connectToTV: service];
+        }
+    }];
 }
 
 - (void)onServiceFound:(Service *)service {
-    /* YOLO! */
-    NSLog(@"%@", service);
 }
 
 - (void)onServiceLost:(Service *)service {
-    
 }
 
 - (void)connectToTV:(Service *)service {
-    NSURL * appUrl = [NSURL URLWithString: @""];
-    NSString * channelID = @"";
+    NSString * appUrl = @"http://apps.appwerkstatt.net/tvbuttler/TVButler";
+    NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
     Application * awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
     awesomeApplication.connectionTimeout = 5.0;
     [awesomeApplication start:^(BOOL success, NSError * _Nullable error) {
         // YEP?
         if(success) {
-            
+            NSLog(@"YO:APP STARTED.");
         } else {
             // FUCK?
         }
@@ -89,67 +104,20 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [myTVShows count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tvShowCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+    
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

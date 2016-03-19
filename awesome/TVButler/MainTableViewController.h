@@ -11,6 +11,7 @@
 
 @interface MainTableViewController : UITableViewController <ServiceSearchDelegate> {
     ServiceSearch * samsungSearch;
+    NSMutableArray * myTVShows;
 }
 
 @end
