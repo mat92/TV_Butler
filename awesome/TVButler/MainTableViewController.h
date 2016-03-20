@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <SmartView/SmartView.h>
 
-@interface MainTableViewController : UITableViewController <ServiceSearchDelegate> {
+@interface MainTableViewController : UITableViewController <ServiceSearchDelegate, ChannelDelegate> {
     ServiceSearch * samsungSearch;
     NSMutableArray * myTVShows;
+    Application * awesomeApplication;
 }
 
 @end

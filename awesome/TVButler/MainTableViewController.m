@@ -14,6 +14,7 @@
 #import "tvShowTableViewCell.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "DetailTableViewController.h"
+#import "MagicZapZao.h"
 
 @interface MainTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
@@ -89,16 +90,27 @@
     NSString * appUrl = @"y9oM2n7YMl.tvbutler";
     NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
-    Application * awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
+    awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
     awesomeApplication.connectionTimeout = 5.0;
+    awesomeApplication.delegate = self;
     [awesomeApplication start:^(BOOL success, NSError * _Nullable error) {
         // YEP?
         if(success) {
-            NSLog(@"YO:APP STARTED.");
+            [awesomeApplication connect: @{} completionHandler:^(ChannelClient * _Nullable asdf, NSError * _Nullable errasdf) {
+                if(asdf) {
+                    NSLog(@"Should be connected... Maybe.. u never know!");
+                }
+            }];
         } else {
             // FUCK?
         }
     }];
+}
+
+- (void)onMessage:(Message *)message {
+    if([message.event isEqualToString: @"availableChannels"]) {
+        // YEP!
+    }
 }
 
 - (BOOL)canBecomeFirstResponder
@@ -115,7 +127,10 @@
 }
 
 - (void)zapZap {
-    
+    MagicZapZao * zapZap = [[MagicZapZao alloc] init];
+    [zapZap getNextZap:^(NSString *zapToTVShow) {
+        [awesomeApplication publishWithEvent: @"changeToChannel" message: zapToTVShow];
+    }];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
