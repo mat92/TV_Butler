@@ -41,6 +41,10 @@
 - (void)loadCurrentTVShows {
     myTVShows = [[NSMutableArray alloc] init];
     [self loadTVShowForSenderID: @"760289"];
+    [self loadTVShowForSenderID: @"751045"];
+    [self loadTVShowForSenderID: @"751045"];
+    [self loadTVShowForSenderID: @"755688"];
+    [self loadTVShowForSenderID: @"759507"];
 }
 
 - (void)loadTVShowForSenderID:(NSString *)senderId {
@@ -87,7 +91,7 @@
 }
 
 - (IBAction)start:(id)sender {
-    [Service getByURI: @"http://10.100.105.182:8001/api/v2/" timeout:5.0 completionHandler:^(Service * _Nullable service, NSError * _Nullable error) {
+    [Service getByURI: @"http://10.100.105.182:8001/api/v2/" timeout: 5.0 completionHandler:^(Service * _Nullable service, NSError * _Nullable error) {
         if(service) {
             [self connectToTV: service];
         }
@@ -101,7 +105,7 @@
 }
 
 - (void)connectToTV:(Service *)service {
-    NSString * appUrl = @"y9oM2n7YMl.tvbutler";
+    NSString * appUrl = @"mEVluQrjzm.BasicProject";
     NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
     awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
@@ -110,7 +114,7 @@
     [awesomeApplication start:^(BOOL success, NSError * _Nullable error) {
         // YEP?
         if(success) {
-            [awesomeApplication connect: @{} completionHandler:^(ChannelClient * _Nullable asdf, NSError * _Nullable errasdf) {
+            [awesomeApplication connect: @{ @"name": @"penis" } completionHandler:^(ChannelClient * _Nullable asdf, NSError * _Nullable errasdf) {
                 if(asdf) {
                     NSLog(@"Should be connected... Maybe.. u never know!");
                 }
