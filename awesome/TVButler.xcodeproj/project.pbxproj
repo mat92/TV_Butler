@@ -24,6 +24,7 @@
 		DF5C13441C9DCFD1003475E4 /* MagicZapZao.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13431C9DCFD1003475E4 /* MagicZapZao.m */; };
 		DF5C13481C9DE293003475E4 /* DevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */; };
 		DF5C134D1C9DFFF5003475E4 /* tvShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */; };
+		DF5C13501C9E24C9003475E4 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,8 @@
 		DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesTableViewController.m; sourceTree = "<group>"; };
 		DF5C134B1C9DFFF5003475E4 /* tvShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tvShowTableViewCell.h; sourceTree = "<group>"; };
 		DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tvShowTableViewCell.m; sourceTree = "<group>"; };
+		DF5C134E1C9E24C9003475E4 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				DF5C13371C9DB66E003475E4 /* MainTableViewController.m */,
 				DF5C13461C9DE293003475E4 /* DevicesTableViewController.h */,
 				DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */,
+				DF5C134E1C9E24C9003475E4 /* DetailTableViewController.h */,
+				DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */,
 				DF5C13421C9DCFD1003475E4 /* MagicZapZao.h */,
 				DF5C13431C9DCFD1003475E4 /* MagicZapZao.m */,
 				DF5C131A1C9D9F51003475E4 /* Main.storyboard */,
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5C13501C9E24C9003475E4 /* DetailTableViewController.m in Sources */,
 				DF5C13381C9DB66E003475E4 /* MainTableViewController.m in Sources */,
 				DF5C13191C9D9F51003475E4 /* ViewController.m in Sources */,
 				DF5C132E1C9DA540003475E4 /* YSLCardView.m in Sources */,

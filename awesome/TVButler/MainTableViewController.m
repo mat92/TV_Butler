@@ -13,6 +13,7 @@
 #import <Parse/Parse.h>
 #import "tvShowTableViewCell.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "DetailTableViewController.h"
 
 @interface MainTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
@@ -85,7 +86,7 @@
 }
 
 - (void)connectToTV:(Service *)service {
-    NSString * appUrl = @"http://yourdomain/BasicProject"; // @"y9oM2n7YMl.tvbutler";
+    NSString * appUrl = @"y9oM2n7YMl.tvbutler";
     NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
     Application * awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
@@ -156,6 +157,13 @@
     cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, cell.containerView.frame.size.height);
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //
+    DetailTableViewController * detailTableView = [self.storyboard instantiateViewControllerWithIdentifier: @"detailTableView"];
+    detailTableView.tvShowName = @"Law And Order";
+    [self.navigationController pushViewController: detailTableView animated: YES];
 }
 
 @end

@@ -131,7 +131,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvShowCell" rowHeight="190" id="zaA-da-V4W" customClass="tvShowTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="tvShowCell" rowHeight="190" id="zaA-da-V4W" customClass="tvShowTableViewCell">
                                 <rect key="frame" x="0.0" y="128" width="320" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zaA-da-V4W" id="p48-Jc-zoM">
@@ -225,6 +225,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="get-7e-fnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1431" y="280"/>
+        </scene>
+        <!--Detail Table View Controller-->
+        <scene sceneID="5qt-ZC-9yi">
+            <objects>
+                <tableViewController storyboardIdentifier="detailTableView" id="zeq-BI-8kb" customClass="DetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FhA-Dy-rXN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="X94-aR-oAr">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UWR-Dy-hPp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                </imageView>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UTU-CM-FkW">
+                                    <rect key="frame" x="8" y="180" width="304" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="Ea8-1q-QJr"/>
+                                    </constraints>
+                                    <segments>
+                                        <segment title="7TV"/>
+                                        <segment title="Twitter"/>
+                                        <segment title="Info"/>
+                                    </segments>
+                                </segmentedControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Law &amp; Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rut-6V-bPp">
+                                    <rect key="frame" x="8" y="141" width="304" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="eub-xp-rlm"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="rut-6V-bPp" secondAttribute="trailing" constant="8" id="92O-gX-3Pm"/>
+                                <constraint firstItem="UWR-Dy-hPp" firstAttribute="top" secondItem="X94-aR-oAr" secondAttribute="top" id="K4d-K0-DpR"/>
+                                <constraint firstItem="rut-6V-bPp" firstAttribute="leading" secondItem="X94-aR-oAr" secondAttribute="leading" constant="8" id="OkB-G6-4gj"/>
+                                <constraint firstItem="UWR-Dy-hPp" firstAttribute="leading" secondItem="X94-aR-oAr" secondAttribute="leading" id="Ybd-At-KRp"/>
+                                <constraint firstItem="UTU-CM-FkW" firstAttribute="leading" secondItem="X94-aR-oAr" secondAttribute="leading" constant="8" id="eco-in-OAk"/>
+                                <constraint firstItem="UTU-CM-FkW" firstAttribute="top" secondItem="rut-6V-bPp" secondAttribute="bottom" constant="18" id="fTG-kd-U4p"/>
+                                <constraint firstAttribute="trailing" secondItem="UTU-CM-FkW" secondAttribute="trailing" constant="8" id="pp0-7H-ek2"/>
+                                <constraint firstAttribute="bottom" secondItem="UWR-Dy-hPp" secondAttribute="bottom" constant="40" id="riu-gK-N4z"/>
+                                <constraint firstAttribute="trailing" secondItem="UWR-Dy-hPp" secondAttribute="trailing" id="sVe-jP-NTI"/>
+                                <constraint firstItem="UTU-CM-FkW" firstAttribute="top" secondItem="UWR-Dy-hPp" secondAttribute="bottom" constant="8" id="um7-yc-oAZ"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IhO-j4-CnM">
+                                <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IhO-j4-CnM" id="iw7-Id-5dn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zeq-BI-8kb" id="lIY-p1-Yhp"/>
+                            <outlet property="delegate" destination="zeq-BI-8kb" id="Qh1-xS-z4o"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZF-XS-Rha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="280"/>
         </scene>
     </scenes>
     <resources>
