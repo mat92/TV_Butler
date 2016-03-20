@@ -2,6 +2,6 @@
 <profiles version="3.0">
 <profile name="TVButler">
 <profileitem ca="" distributor="0" key="/Users/matthias/tizen-sdk-data/keystore/TVButler/author.p12" password="t2wTorkLaeg=" rootca=""/>
-<profileitem ca="" distributor="1" key="/Users/matthias/tizen-sdk-data/keystore/TVButler/distributor.p12" password="Cz+hVKmoS4EHuLZa2y9geA==" rootca=""/>
+<profileitem ca="" distributor="1" key="/Users/matthias/tizen-sdk-data/keystore/TVButler/distributor.p12" password="zfVahZCalcE=" rootca=""/>
 </profile>
 </profiles>

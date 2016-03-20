@@ -176,10 +176,10 @@ window.onload = function() {
 
 		// Tell clients what channel is running
 		function broadcast() {
-			var clength = clients.length;
+			var clength = channel.clients.length;
 			for (var i = 0; i < clength; i++) {
-				channel.publish('say', 'Hello ' + client.attributes.name,
-						clients[i].id);
+				channel.publish('say', getCurrentChannel().channelName,
+						channel.clients[i].id);
 			}
 		}
 		var interval = setInterval(broadcast, 5000);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/BasicProject" version="1.0.0" viewmodes="maximized">
-    <access origin="*" subdomains="true"/>
+    <access origin="*" subdomains="true"></access>
     <tizen:application id="mEVluQrjzm.BasicProject" package="mEVluQrjzm" required_version="2.3"/>
     <tizen:category name="http://samsung.com/category/ticker"/>
     <content src="index.html"/>
@@ -9,5 +9,5 @@
     <name>BasicProject</name>
     <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
     <tizen:privilege name="http://tizen.org/privilege/tv.channel"/>
-    <tizen:profile name="tv-samsung-public"/>
+    <tizen:profile name="tv"/>
 </widget>
