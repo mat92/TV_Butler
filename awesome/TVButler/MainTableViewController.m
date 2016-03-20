@@ -114,7 +114,7 @@
     [awesomeApplication start:^(BOOL success, NSError * _Nullable error) {
         // YEP?
         if(success) {
-            [awesomeApplication connect: @{ @"name": @"penis" } completionHandler:^(ChannelClient * _Nullable asdf, NSError * _Nullable errasdf) {
+            [awesomeApplication connect: @{ @"name": [[PFUser currentUser] objectForKey: @"name"], @"avatarUrl": [[PFUser currentUser] objectForKey: @"avatar_url"] } completionHandler:^(ChannelClient * _Nullable asdf, NSError * _Nullable errasdf) {
                 if(asdf) {
                     NSLog(@"Should be connected... Maybe.. u never know!");
                 }
@@ -210,6 +210,8 @@
     NSArray * images = [currentTVShow objectForKey: @"relatedMaterial"];
     if(images.count > 0) {
         [cell.imageView setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]] placeholderImage: [UIImage imageNamed: @"no_image"]];
+    } else {
+        cell.imageView.image = [UIImage imageNamed: @"no_image"];
     }
     
     NSDateFormatter *dateFormatterA = [[NSDateFormatter alloc] init];

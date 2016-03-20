@@ -175,6 +175,12 @@
                                                             <color key="textColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXM-v6-k0q">
+                                                            <rect key="frame" x="234" y="15" width="62" height="37"/>
+                                                            <state key="normal" title="ZapZap">
+                                                                <color key="titleColor" red="1" green="0.80780382100000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -286,7 +292,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rut-6V-bPp">
-                                    <rect key="frame" x="8" y="111" width="304" height="26"/>
+                                    <rect key="frame" x="8" y="118" width="304" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="26" id="5m4-CY-6vT"/>
                                     </constraints>
@@ -295,7 +301,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCU-rg-iaE">
-                                    <rect key="frame" x="8" y="138" width="304" height="19"/>
+                                    <rect key="frame" x="8" y="145" width="304" height="19"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="19" id="AL5-2g-fBd"/>
                                     </constraints>
@@ -316,7 +322,7 @@
                                 <constraint firstItem="UWR-Dy-hPp" firstAttribute="leading" secondItem="X94-aR-oAr" secondAttribute="leading" id="Ybd-At-KRp"/>
                                 <constraint firstAttribute="trailing" secondItem="4cV-2Q-ndm" secondAttribute="trailing" id="aAj-TO-Sbe"/>
                                 <constraint firstItem="UTU-CM-FkW" firstAttribute="leading" secondItem="X94-aR-oAr" secondAttribute="leading" constant="8" id="eco-in-OAk"/>
-                                <constraint firstItem="UTU-CM-FkW" firstAttribute="top" secondItem="vCU-rg-iaE" secondAttribute="bottom" constant="23" id="kGz-BL-g3f"/>
+                                <constraint firstItem="UTU-CM-FkW" firstAttribute="top" secondItem="vCU-rg-iaE" secondAttribute="bottom" constant="16" id="kGz-BL-g3f"/>
                                 <constraint firstAttribute="trailing" secondItem="UTU-CM-FkW" secondAttribute="trailing" constant="8" id="pp0-7H-ek2"/>
                                 <constraint firstAttribute="trailing" secondItem="rut-6V-bPp" secondAttribute="trailing" constant="8" id="rfU-Ck-bHy"/>
                                 <constraint firstAttribute="bottom" secondItem="UWR-Dy-hPp" secondAttribute="bottom" constant="40" id="riu-gK-N4z"/>

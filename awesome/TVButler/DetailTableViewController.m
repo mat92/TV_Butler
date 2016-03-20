@@ -48,7 +48,9 @@
     
     NSArray * images = [tvShow objectForKey: @"relatedMaterial"];
     if(images.count > 0) {
-        [_tvShowHeaderImage setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]]];
+        [_tvShowHeaderImage setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]] placeholderImage: [UIImage imageNamed: @"no_image"]];
+    } else {
+        _tvShowHeaderImage.image = [UIImage imageNamed: @"no_image"];
     }
     
     NSDateFormatter *dateFormatterA = [[NSDateFormatter alloc] init];
@@ -61,6 +63,12 @@
     _progressConstraint.constant = self.view.frame.size.width * progress;
     [_progressView needsUpdateConstraints];
     [_progressView setNeedsDisplay];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAction target:self action: @selector(shareIt:)];
+}
+
+- (void)shareIt:(id)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {
