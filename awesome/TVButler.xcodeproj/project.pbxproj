@@ -25,6 +25,7 @@
 		DF5C13481C9DE293003475E4 /* DevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */; };
 		DF5C134D1C9DFFF5003475E4 /* tvShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */; };
 		DF5C13501C9E24C9003475E4 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */; };
+		DFD404EA1C9E9ECA005B4261 /* pizzaHudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD404E91C9E9ECA005B4261 /* pizzaHudViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +75,8 @@
 		DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tvShowTableViewCell.m; sourceTree = "<group>"; };
 		DF5C134E1C9E24C9003475E4 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		DFD404E81C9E9ECA005B4261 /* pizzaHudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pizzaHudViewController.h; sourceTree = "<group>"; };
+		DFD404E91C9E9ECA005B4261 /* pizzaHudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pizzaHudViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 		DF5C13101C9D9F51003475E4 /* TVButler */ = {
 			isa = PBXGroup;
 			children = (
+				DFD404E71C9E9EB4005B4261 /* New Group */,
 				DF5C13141C9D9F51003475E4 /* AppDelegate.h */,
 				DF5C13151C9D9F51003475E4 /* AppDelegate.m */,
 				DF5C13171C9D9F51003475E4 /* ViewController.h */,
@@ -142,6 +146,8 @@
 				DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */,
 				DF5C13421C9DCFD1003475E4 /* MagicZapZao.h */,
 				DF5C13431C9DCFD1003475E4 /* MagicZapZao.m */,
+				DFD404E81C9E9ECA005B4261 /* pizzaHudViewController.h */,
+				DFD404E91C9E9ECA005B4261 /* pizzaHudViewController.m */,
 				DF5C131A1C9D9F51003475E4 /* Main.storyboard */,
 				DF5C131D1C9D9F51003475E4 /* Assets.xcassets */,
 				DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */,
@@ -181,6 +187,13 @@
 				DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		DFD404E71C9E9EB4005B4261 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +313,7 @@
 				DF5C13441C9DCFD1003475E4 /* MagicZapZao.m in Sources */,
 				DF5C132F1C9DA540003475E4 /* YSLDraggableCardContainer.m in Sources */,
 				DF5C13131C9D9F51003475E4 /* main.m in Sources */,
+				DFD404EA1C9E9ECA005B4261 /* pizzaHudViewController.m in Sources */,
 				DF5C13351C9DA630003475E4 /* CardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

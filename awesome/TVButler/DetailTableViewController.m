@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *tvShowSubTitle;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *progressConstraint;
 @property (weak, nonatomic) IBOutlet UIView *progressView;
+@property (weak, nonatomic) IBOutlet UITextView *tvDescription;
+@property (weak, nonatomic) IBOutlet UIButton *zapTo;
 
 @end
 
@@ -26,6 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (IBAction)zapToParty:(id)sender {
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,9 +47,26 @@
         }
     }
     
+    _zapTo.layer.cornerRadius = 5.0;
+    
+    NSArray * descriptions = [tvShow objectForKey: @"searchableTextItems"];
+    NSString * description = @"";
+    for(int i = 0; i < descriptions.count; i++) {
+        NSDictionary * curr = [descriptions objectAtIndex: i];
+        if([[curr objectForKey: @"type"] isEqualToString: @"long"]) {
+            // THIS ONE!
+            NSDictionary * value = [curr objectForKey: @"value"];
+            if([value objectForKey: @"DE"]) {
+                description = [value objectForKey: @"DE"];
+            }
+        }
+    }
+    
     // Configure the cell...
     _tvShowTitle.text = title;
     _tvShowSubTitle.text = [tvShow objectForKey: @"sourceName"];
+    
+    _tvDescription.text = description;
     
     NSArray * images = [tvShow objectForKey: @"relatedMaterial"];
     if(images.count > 0) {
@@ -74,18 +96,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
 }
 
 /*

@@ -15,6 +15,7 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "DetailTableViewController.h"
 #import "MagicZapZao.h"
+#import "pizzaHudViewController.h"
 
 @interface MainTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
@@ -44,6 +45,8 @@
     [self loadTVShowForSenderID: @"751045"];
     [self loadTVShowForSenderID: @"755688"];
     [self loadTVShowForSenderID: @"759507"];
+    [self loadTVShowForSenderID: @"751046"];
+    [self loadTVShowForSenderID: @"750795"];
 }
 
 - (void)loadTVShowForSenderID:(NSString *)senderId {
@@ -158,6 +161,22 @@
     }];
 }
 
+- (IBAction)startPizzaSnow:(id)sender {
+    pizzaHudViewController * pizzaHudA = [self.storyboard instantiateViewControllerWithIdentifier: @"pizzaHud"];
+    pizzaHud = pizzaHudA.view;
+    [self.view addSubview: pizzaHudA.view];
+    UITapGestureRecognizer *singleFingerTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(handleSingleTap:)];
+    [pizzaHud addGestureRecognizer:singleFingerTap];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
+    //CGPoint location = [recognizer locationInView:[recognizer.view superview]];
+    [pizzaHud removeFromSuperview];
+    [awesomeApplication publishWithEvent: @"awesomePizzaSnow" message: @"gogogog"];
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleDefault;
@@ -226,8 +245,21 @@
     cell.widthConstraint.constant = cell.containerView.frame.size.width * progress;
     [cell.progressView needsUpdateConstraints];
     [cell.progressView setNeedsDisplay];
+    cell.zapTo.layer.cornerRadius = 5.0;
+    
+    [cell.zapTo addTarget:self action:@selector(checkButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
+}
+
+- (void)checkButtonTapped:(id)sender
+{
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    if (indexPath != nil)
+    {
+        [awesomeApplication publishWithEvent: @"changeToChannel" message: @"pro7"];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

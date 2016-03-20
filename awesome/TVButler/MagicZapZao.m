@@ -24,7 +24,7 @@
 }
 
 - (void)getNextZap:(void (^)(NSString * zapToTVShow))finishBlock {
-    finishBlock(@"PRO7");
+    finishBlock(@"randome");
 }
 
 @end

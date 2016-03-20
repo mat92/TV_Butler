@@ -14,6 +14,7 @@
     NSMutableArray * myTVShows;
     Application * awesomeApplication;
     NSMutableArray * currentTVShows;
+    UIView * pizzaHud;
 }
 
 @end
