@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *tvShowTitle;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tvContentSection;
 @property (weak, nonatomic) IBOutlet UILabel *tvShowSubTitle;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *progressConstraint;
+@property (weak, nonatomic) IBOutlet UIView *progressView;
 
 @end
 
@@ -48,6 +50,17 @@
     if(images.count > 0) {
         [_tvShowHeaderImage setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]]];
     }
+    
+    NSDateFormatter *dateFormatterA = [[NSDateFormatter alloc] init];
+    [dateFormatterA setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+00:00'"];
+    NSString * publishedStartDateTime = [tvShow objectForKey: @"publishedStartDateTime"];
+    NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
+    float publishedDuration = [[tvShow objectForKey: @"publishedDuration"] intValue];
+    float alreadyWatched = [[NSDate date] timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
+    float progress = alreadyWatched / publishedDuration;
+    _progressConstraint.constant = self.view.frame.size.width * progress;
+    [_progressView needsUpdateConstraints];
+    [_progressView setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning {
