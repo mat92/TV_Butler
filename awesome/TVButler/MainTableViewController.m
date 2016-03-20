@@ -220,7 +220,8 @@
     float alreadyWatched = [[NSDate date] timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
     float progress = alreadyWatched / publishedDuration;
     cell.containerView.layer.cornerRadius = 5.0;
-    cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * progress, 5.0);
+    //cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * progress, 5.0);
+    cell.widthConstraint.constant = cell.containerView.frame.size.width * progress;
     [cell.progressView needsUpdateConstraints];
     [cell.progressView setNeedsDisplay];
     

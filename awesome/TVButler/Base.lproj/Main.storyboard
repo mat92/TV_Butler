@@ -149,9 +149,13 @@
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3M0-ZP-inq">
                                                     <rect key="frame" x="0.0" y="113" width="304" height="60"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-OJ-TOH">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-OJ-TOH">
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="5"/>
                                                             <color key="backgroundColor" red="1" green="0.80780382098195247" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="6T6-qI-0o9"/>
+                                                                <constraint firstAttribute="height" constant="5" id="sX0-T1-pCb"/>
+                                                            </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anna und Frank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-RA-30g">
                                                             <rect key="frame" x="8" y="13" width="288" height="26"/>
@@ -168,16 +172,18 @@
                                                                 <constraint firstAttribute="height" constant="19" id="Lqb-Y2-8rh"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                                            <color key="textColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="YFh-RA-30g" secondAttribute="trailing" constant="8" id="6p6-Yf-5r4"/>
+                                                        <constraint firstItem="d3h-OJ-TOH" firstAttribute="top" secondItem="3M0-ZP-inq" secondAttribute="top" id="6te-Oa-6bf"/>
                                                         <constraint firstItem="v2X-EU-DvQ" firstAttribute="leading" secondItem="3M0-ZP-inq" secondAttribute="leading" constant="8" id="Xjd-Py-TLZ"/>
                                                         <constraint firstAttribute="bottom" secondItem="v2X-EU-DvQ" secondAttribute="bottom" constant="8" id="ZgA-I8-7kR"/>
                                                         <constraint firstItem="YFh-RA-30g" firstAttribute="leading" secondItem="3M0-ZP-inq" secondAttribute="leading" constant="8" id="gUf-Im-h1q"/>
+                                                        <constraint firstItem="d3h-OJ-TOH" firstAttribute="leading" secondItem="3M0-ZP-inq" secondAttribute="leading" id="nyd-Jl-EO0"/>
                                                         <constraint firstAttribute="bottom" secondItem="YFh-RA-30g" secondAttribute="bottom" constant="21" id="p6D-rc-234"/>
                                                         <constraint firstAttribute="height" constant="60" id="t7h-k7-xhF"/>
                                                         <constraint firstAttribute="trailing" secondItem="v2X-EU-DvQ" secondAttribute="trailing" constant="8" id="vE3-ZE-vRR"/>
@@ -210,6 +216,7 @@
                                     <outlet property="label" destination="YFh-RA-30g" id="1XW-fh-L8e"/>
                                     <outlet property="progressView" destination="d3h-OJ-TOH" id="h5b-PV-UzJ"/>
                                     <outlet property="sender" destination="v2X-EU-DvQ" id="yc8-NK-cev"/>
+                                    <outlet property="widthConstraint" destination="6T6-qI-0o9" id="yP1-NR-Gsn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -218,7 +225,10 @@
                             <outlet property="delegate" destination="Kbi-pp-Tfl" id="igV-Qv-t8T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="aQj-Y3-QaN"/>
+                    <navigationItem key="navigationItem" id="aQj-Y3-QaN">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="H4j-0B-ZhL"/>
+                        <barButtonItem key="rightBarButtonItem" image="pizza" id="mvM-Ax-QOM"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="botStatus" destination="qoo-EK-dq7" id="SJX-VB-aN3"/>
@@ -236,7 +246,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FhA-Dy-rXN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.019607843137254902" green="0.094117647058823528" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="X94-aR-oAr">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,7 +268,7 @@
                                 </segmentedControl>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cV-2Q-ndm">
                                     <rect key="frame" x="0.0" y="117" width="320" height="55"/>
-                                    <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="55" id="VzS-36-Y5f"/>
                                     </constraints>
@@ -278,11 +288,11 @@
                                         <constraint firstAttribute="height" constant="19" id="AL5-2g-fBd"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.019607843140000001" green="0.094117647060000004" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="4cV-2Q-ndm" firstAttribute="leading" secondItem="X94-aR-oAr" secondAttribute="leading" id="FM3-MI-aCG"/>
                                 <constraint firstItem="UTU-CM-FkW" firstAttribute="top" secondItem="4cV-2Q-ndm" secondAttribute="bottom" constant="8" id="JkM-qw-m2M"/>
@@ -332,5 +342,7 @@
     </scenes>
     <resources>
         <image name="butler_white_logo" width="480" height="480"/>
+        <image name="menu" width="28" height="28"/>
+        <image name="pizza" width="28" height="28"/>
     </resources>
 </document>

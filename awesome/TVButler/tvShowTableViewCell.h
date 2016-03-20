@@ -15,5 +15,6 @@
 @property IBOutlet UILabel * sender;
 @property IBOutlet UIView * containerView;
 @property IBOutlet UIView * progressView;
+@property IBOutlet NSLayoutConstraint * widthConstraint;
 
 @end
