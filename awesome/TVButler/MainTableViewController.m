@@ -18,6 +18,7 @@
 
 @interface MainTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *botStatus;
 
 @end
 
@@ -82,15 +83,10 @@
     [dateFormatter setDateFormat:@"hh:mm"];
     _currentTimeLabel.text = [NSString stringWithFormat: @"Heute, %@", [dateFormatter stringFromDate:[NSDate date]]];
     
-    // Update current tv shows.
     [self loadCurrentTVShows];
 }
 
 - (IBAction)start:(id)sender {
-    //samsungSearch = [Service search];
-    //samsungSearch.delegate = self;
-    //[samsungSearch start];
-    
     [Service getByURI: @"http://10.100.105.182:8001/api/v2/" timeout:5.0 completionHandler:^(Service * _Nullable service, NSError * _Nullable error) {
         if(service) {
             [self connectToTV: service];
@@ -126,6 +122,7 @@
 }
 
 - (void)onMessage:(Message *)message {
+    _botStatus.image = [UIImage imageNamed: @"butler_red_logo"];
     if([message.event isEqualToString: @"availableChannels"]) {
         // YEP!
     }

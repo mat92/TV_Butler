@@ -219,6 +219,7 @@
                     <navigationItem key="navigationItem" id="aQj-Y3-QaN"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="botStatus" destination="qoo-EK-dq7" id="SJX-VB-aN3"/>
                         <outlet property="currentTimeLabel" destination="zD4-QV-ot8" id="tKd-wg-T2A"/>
                     </connections>
                 </tableViewController>
