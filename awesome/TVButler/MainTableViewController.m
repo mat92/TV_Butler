@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     myTVShows = [[NSMutableArray alloc] init];
+    currentTVShows = [[NSMutableArray alloc] init];
     
     [self setNeedsStatusBarAppearanceUpdate];
     [self updateTime];
@@ -37,23 +38,45 @@
 }
 
 - (void)loadCurrentTVShows {
+    myTVShows = [[NSMutableArray alloc] init];
     [self loadTVShowForSenderID: @"760289"];
 }
 
 - (void)loadTVShowForSenderID:(NSString *)senderId {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
-    NSString * dateTimeCurrent = [dateFormatter stringFromDate: [NSDate date]];
+    NSDate * dateTimeCurrentA = [[NSDate date] dateByAddingTimeInterval: -18000];
+    NSString * dateTimeCurrent = [dateFormatter stringFromDate: dateTimeCurrentA];
     NSString * paras = [NSString stringWithFormat: @"{\"criteria\":[{\"term\":\"publishedStartDateTime\",\"operator\":\"atLeast\",\"value\":\"%@\"},{\"term\":\"sourceId\",\"operator\":\"in\",\"values\":[\"%@\"]}],\"operator\":\"and\"}", dateTimeCurrent, senderId];
     NSString * masterURL = [NSString stringWithFormat: @"http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter?numberOfResults=10&filter=%@&api_key=240e4458fc4c6ac85c290481646b21ef", [paras stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLUserAllowedCharacterSet]]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET: masterURL parameters: nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
-        myTVShows = responseObject;
+        //myTVShows = responseObject;
+        NSArray * objects = (NSArray *)responseObject;
+        NSDateFormatter *dateFormatterA = [[NSDateFormatter alloc] init];
+        [dateFormatterA setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+00:00'"];
+        for(int i = 0; i < objects.count; i++) {
+            NSDictionary * currentTVShow = [objects objectAtIndex: i];
+            NSString * publishedStartDateTime = [currentTVShow objectForKey: @"publishedStartDateTime"];
+            NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
+            int publishedDuration = [[currentTVShow objectForKey: @"publishedDuration"] intValue];
+            NSDate * tvShowEndDate = [tvShowStartDate dateByAddingTimeInterval: publishedDuration];
+            NSLog(@"%@ - %@", tvShowStartDate, tvShowEndDate);
+            
+            if([self date: [NSDate date] isBetweenDate: tvShowStartDate andDate: tvShowEndDate]) {
+                [myTVShows addObject: currentTVShow];
+            }
+        }
+        
         [self.tableView reloadData];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+}
+
+- (BOOL)date:(NSDate*)date isBetweenDate:(NSDate*)beginDate andDate:(NSDate*)endDate {
+    return (([date compare:beginDate] != NSOrderedAscending) && ([date compare:endDate] != NSOrderedDescending));
 }
 
 - (void)updateTime {

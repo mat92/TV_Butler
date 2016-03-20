@@ -13,6 +13,7 @@
     ServiceSearch * samsungSearch;
     NSMutableArray * myTVShows;
     Application * awesomeApplication;
+    NSMutableArray * currentTVShows;
 }
 
 @end
