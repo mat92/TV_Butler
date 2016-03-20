@@ -62,8 +62,6 @@
             NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
             int publishedDuration = [[currentTVShow objectForKey: @"publishedDuration"] intValue];
             NSDate * tvShowEndDate = [tvShowStartDate dateByAddingTimeInterval: publishedDuration];
-            NSLog(@"%@ - %@", tvShowStartDate, tvShowEndDate);
-            
             if([self date: [NSDate date] isBetweenDate: tvShowStartDate andDate: tvShowEndDate]) {
                 [myTVShows addObject: currentTVShow];
             }
@@ -184,10 +182,29 @@
     
     NSDictionary * currentTVShow = [myTVShows objectAtIndex: indexPath.row];
     
+    
+    NSArray * titles = [currentTVShow objectForKey: @"searchableTitles"];
+    NSString * title = @"";
+    for(int i = 0; i < titles.count; i++) {
+        NSDictionary * curr = [titles objectAtIndex: i];
+        if([[curr objectForKey: @"type"] isEqualToString: @"main"]) {
+            // THIS ONE!
+            NSDictionary * value = [curr objectForKey: @"value"];
+            if([value objectForKey: @"DE"]) {
+                title = [value objectForKey: @"DE"];
+            }
+        }
+    }
+    
     // Configure the cell...
-    //cell.label.text = [currentTVShow objectForKey: @"name"];
+    cell.label.text = title;
     cell.sender.text = [currentTVShow objectForKey: @"sourceName"];
-    [cell.imageView setImageWithURL: [NSURL URLWithString: [currentTVShow objectForKey: @"image_url"]]];
+    
+    NSArray * images = [currentTVShow objectForKey: @"relatedMaterial"];
+    if(images.count > 0) {
+        [cell.imageView setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]]];
+    }
+    
     cell.containerView.layer.cornerRadius = 5.0;
     cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, cell.containerView.frame.size.height);
     
