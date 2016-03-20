@@ -108,7 +108,7 @@
     NSString * appUrl = @"mEVluQrjzm.BasicProject";
     NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
-    awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
+    awesomeApplication = [service createApplication: appUrl channelURI: channelID args: nil];
     awesomeApplication.connectionTimeout = 5.0;
     awesomeApplication.delegate = self;
     [awesomeApplication start:^(BOOL success, NSError * _Nullable error) {
