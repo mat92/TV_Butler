@@ -30,9 +30,13 @@
     myTVShows = [[NSMutableArray alloc] init];
     currentTVShows = [[NSMutableArray alloc] init];
     
+    awesomeDate = [NSDate date];
+    // FIX!
+    awesomeDate = [awesomeDate dateByAddingTimeInterval: -60*60*24];
+    
     [self setNeedsStatusBarAppearanceUpdate];
     [self updateTime];
-    [NSTimer scheduledTimerWithTimeInterval: 60.0
+    [NSTimer scheduledTimerWithTimeInterval: 160.0
                                      target: self
                                    selector: @selector(updateTime)
                                    userInfo: nil
@@ -52,13 +56,13 @@
 - (void)loadTVShowForSenderID:(NSString *)senderId {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
-    NSDate * dateTimeCurrentA = [[NSDate date] dateByAddingTimeInterval: -18000];
+    NSDate * dateTimeCurrentA = [awesomeDate dateByAddingTimeInterval: -18000];
     NSString * dateTimeCurrent = [dateFormatter stringFromDate: dateTimeCurrentA];
     NSString * paras = [NSString stringWithFormat: @"{\"criteria\":[{\"term\":\"publishedStartDateTime\",\"operator\":\"atLeast\",\"value\":\"%@\"},{\"term\":\"sourceId\",\"operator\":\"in\",\"values\":[\"%@\"]}],\"operator\":\"and\"}", dateTimeCurrent, senderId];
-    NSString * masterURL = [NSString stringWithFormat: @"http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter?numberOfResults=10&filter=%@&api_key=240e4458fc4c6ac85c290481646b21ef", [paras stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLUserAllowedCharacterSet]]];
+    NSString * masterURL = [NSString stringWithFormat: @"http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter?numberOfResults=20&filter=%@&api_key=240e4458fc4c6ac85c290481646b21ef", [paras stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLUserAllowedCharacterSet]]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET: masterURL parameters: nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        //NSLog(@"JSON: %@", responseObject);
+        NSLog(@"JSON: %@", responseObject);
         //myTVShows = responseObject;
         NSArray * objects = (NSArray *)responseObject;
         NSDateFormatter *dateFormatterA = [[NSDateFormatter alloc] init];
@@ -69,7 +73,7 @@
             NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
             int publishedDuration = [[currentTVShow objectForKey: @"publishedDuration"] intValue];
             NSDate * tvShowEndDate = [tvShowStartDate dateByAddingTimeInterval: publishedDuration];
-            if([self date: [NSDate date] isBetweenDate: tvShowStartDate andDate: tvShowEndDate]) {
+            if([self date: awesomeDate isBetweenDate: tvShowStartDate andDate: tvShowEndDate]) {
                 [myTVShows addObject: currentTVShow];
             }
         }
@@ -238,7 +242,7 @@
     NSString * publishedStartDateTime = [currentTVShow objectForKey: @"publishedStartDateTime"];
     NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
     float publishedDuration = [[currentTVShow objectForKey: @"publishedDuration"] intValue];
-    float alreadyWatched = [[NSDate date] timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
+    float alreadyWatched = [awesomeDate timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
     float progress = alreadyWatched / publishedDuration;
     cell.containerView.layer.cornerRadius = 5.0;
     //cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * progress, 5.0);

@@ -171,7 +171,6 @@
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"Interests successfuly saved to Parse");
-            
             [self dismissViewControllerAnimated: YES completion: nil];
         } else {
             NSLog(@"Cant save interests to Parse");

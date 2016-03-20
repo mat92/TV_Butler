@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailTableViewController : UITableViewController {
-    
+    NSDate * awesomeDate;
 }
 
 @property NSDictionary * tvShow;

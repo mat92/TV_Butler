@@ -15,6 +15,7 @@
     Application * awesomeApplication;
     NSMutableArray * currentTVShows;
     UIView * pizzaHud;
+    NSDate * awesomeDate;
 }
 
 @end

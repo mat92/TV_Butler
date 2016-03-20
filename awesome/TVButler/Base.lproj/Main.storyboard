@@ -101,7 +101,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OnC-fm-aTT" firstAttribute="top" secondItem="PMv-dg-1OI" secondAttribute="top" constant="40" id="4bU-Db-FRa"/>
                             <constraint firstItem="OnC-fm-aTT" firstAttribute="leading" secondItem="PMv-dg-1OI" secondAttribute="leading" id="Lad-Lq-yPg"/>
@@ -296,7 +296,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FhA-Dy-rXN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.01176470588" green="0.12941176469999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="X94-aR-oAr">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -328,7 +328,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="Yrv-Ro-KSB" firstAttribute="leading" secondItem="4cV-2Q-ndm" secondAttribute="leading" id="4Jk-xM-6SB"/>
                                         <constraint firstAttribute="height" constant="55" id="VzS-36-Y5f"/>
@@ -416,7 +416,7 @@
                                                 <constraint firstItem="WAe-Z2-Vyr" firstAttribute="leading" secondItem="iw7-Id-5dn" secondAttribute="leading" constant="8" id="qe0-ln-b4e"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.01176470588" green="0.12941176469999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

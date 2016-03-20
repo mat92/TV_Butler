@@ -28,6 +28,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    awesomeDate = [NSDate date];
+    // FIX!
+    awesomeDate = [awesomeDate dateByAddingTimeInterval: -60*60*24];
 }
 
 - (IBAction)zapToParty:(id)sender {
@@ -80,7 +85,7 @@
     NSString * publishedStartDateTime = [tvShow objectForKey: @"publishedStartDateTime"];
     NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
     float publishedDuration = [[tvShow objectForKey: @"publishedDuration"] intValue];
-    float alreadyWatched = [[NSDate date] timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
+    float alreadyWatched = [awesomeDate timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
     float progress = alreadyWatched / publishedDuration;
     _progressConstraint.constant = self.view.frame.size.width * progress;
     [_progressView needsUpdateConstraints];
