@@ -36,6 +36,7 @@
         UIImageView *logoA = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"butler_logo"]];
         logoA.contentMode=UIViewContentModeScaleAspectFit;
         logInViewController.signUpController.signUpView.logo = logoA;
+        logInViewController.signUpController.signUpView.signUpButton.backgroundColor = [UIColor colorWithRed:0.9961 green:0.8078 blue:0.1961 alpha:1.0];
         
         [self presentViewController:logInViewController animated: NO completion:nil];
     } else {
