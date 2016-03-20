@@ -24,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     myTVShows = [[NSMutableArray alloc] init];
-    [self refreshTVShows];
     
     [self setNeedsStatusBarAppearanceUpdate];
     [self updateTime];
@@ -36,29 +35,35 @@
 }
 
 - (void)loadCurrentTVShows {
-    /* http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter?numberOfResults=100&filter={%22criteria%22:[{%22term%22:%22publishedStartDateTime%22,%22operator%22:%22atLeast%22,%22value%22:%222016-03-19T18:00:00Z%22},{%22term%22:%22publishedStartDateTime%22,%22operator%22:%22atMost%22,%22value%22:%222016-03-19T22:00:00Z%22},{%22term%22:%22sourceName%22,%22operator%22:%22in%22,%22values%22:[%22RTL%22,%22ProSieben%22]}],%22operator%22:%22and%22}&api_key=240e4458fc4c6ac85c290481646b21ef */
-    NSString * sevenHackApiURLRequest = @"";
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+    NSString * dateTimeCurrent = [dateFormatter stringFromDate: [NSDate date]];
+    
+    NSDictionary * filterPara = @{@"criteria": @[ @{@"term":@"publishedStartDateTime",@"operator":@"atLeast",@"value": dateTimeCurrent},@{@"term":@"publishedStartDateTime",@"operator":@"atMost",@"value": dateTimeCurrent},@{@"term":@"sourceId",@"operator":@"in",@"value": @[@760289, @751048, @751045]}],@"operator":@"and"};
+    NSDictionary * paras = @{
+                             @"filter": filterPara,
+                             @"numberOfResults": @"100",
+                             @"api_key": @"240e4458fc4c6ac85c290481646b21ef"
+                             };
+    
+    NSString * sevenHackApiURLRequest = @"http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET: sevenHackApiURLRequest parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+    [manager GET: sevenHackApiURLRequest parameters: paras progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        //NSLog(@"JSON: %@", responseObject);
+        myTVShows = responseObject;
+        [self.tableView reloadData];
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 }
 
 - (void)updateTime {
-    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    NSDateFormatter *dateFormatter= [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh:mm"];
     _currentTimeLabel.text = [NSString stringWithFormat: @"Heute, %@", [dateFormatter stringFromDate:[NSDate date]]];
-}
-
-- (void)refreshTVShows {
-    [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *user, NSError *error) {
-        if([user objectForKey: @"tvShows"]) {
-            myTVShows = [user objectForKey: @"tvShows"];
-            [self.tableView reloadData];
-        }
-    }];
+    
+    // Update current tv shows.
+    [self loadCurrentTVShows];
 }
 
 - (IBAction)start:(id)sender {
@@ -80,7 +85,7 @@
 }
 
 - (void)connectToTV:(Service *)service {
-    NSString * appUrl = @"y9oM2n7YMl.tvbutler";
+    NSString * appUrl = @"http://yourdomain/BasicProject"; // @"y9oM2n7YMl.tvbutler";
     NSString * channelID = @"hackwerkstatt.7hack.tvbutler";
     
     Application * awesomeApplication = [service createApplication: channelID channelURI: appUrl args: nil];
@@ -144,7 +149,8 @@
     NSDictionary * currentTVShow = [myTVShows objectAtIndex: indexPath.row];
     
     // Configure the cell...
-    cell.label.text = [currentTVShow objectForKey: @"name"];
+    //cell.label.text = [currentTVShow objectForKey: @"name"];
+    cell.sender.text = [currentTVShow objectForKey: @"sourceName"];
     [cell.imageView setImageWithURL: [NSURL URLWithString: [currentTVShow objectForKey: @"image_url"]]];
     cell.containerView.layer.cornerRadius = 5.0;
     cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, cell.containerView.frame.size.height);

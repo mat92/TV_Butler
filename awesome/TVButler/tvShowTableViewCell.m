@@ -10,7 +10,7 @@
 
 @implementation tvShowTableViewCell
 
-@synthesize label, imageView, containerView, progressView;
+@synthesize label, imageView, containerView, progressView, sender;
 
 - (void)awakeFromNib {
     // Initialization code

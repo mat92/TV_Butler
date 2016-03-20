@@ -12,6 +12,7 @@
 
 @property IBOutlet UIImageView * imageView;
 @property IBOutlet UILabel * label;
+@property IBOutlet UILabel * sender;
 @property IBOutlet UIView * containerView;
 @property IBOutlet UIView * progressView;
 
