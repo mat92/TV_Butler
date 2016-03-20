@@ -42,7 +42,6 @@
     myTVShows = [[NSMutableArray alloc] init];
     [self loadTVShowForSenderID: @"760289"];
     [self loadTVShowForSenderID: @"751045"];
-    [self loadTVShowForSenderID: @"751045"];
     [self loadTVShowForSenderID: @"755688"];
     [self loadTVShowForSenderID: @"759507"];
 }
@@ -213,8 +212,17 @@
         [cell.imageView setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]] placeholderImage: [UIImage imageNamed: @"no_image"]];
     }
     
+    NSDateFormatter *dateFormatterA = [[NSDateFormatter alloc] init];
+    [dateFormatterA setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+00:00'"];
+    NSString * publishedStartDateTime = [currentTVShow objectForKey: @"publishedStartDateTime"];
+    NSDate * tvShowStartDate = [dateFormatterA dateFromString: publishedStartDateTime];
+    float publishedDuration = [[currentTVShow objectForKey: @"publishedDuration"] intValue];
+    float alreadyWatched = [[NSDate date] timeIntervalSince1970] - [tvShowStartDate timeIntervalSince1970];
+    float progress = alreadyWatched / publishedDuration;
     cell.containerView.layer.cornerRadius = 5.0;
-    cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, 5.0);
+    cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * progress, 5.0);
+    [cell.progressView needsUpdateConstraints];
+    [cell.progressView setNeedsDisplay];
     
     return cell;
 }
