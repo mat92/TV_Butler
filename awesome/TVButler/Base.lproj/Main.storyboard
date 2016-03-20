@@ -71,7 +71,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="haS-Rz-ZVN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.91372549020000005" green="0.0" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.011764705882352941" green="0.12941176470588237" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.99607843139999996" green="0.78039215689999997" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Kbi-pp-Tfl" kind="relationship" relationship="rootViewController" id="q6q-MH-5s3"/>
@@ -88,7 +89,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="190" sectionHeaderHeight="28" sectionFooterHeight="28" id="ImG-F1-VNh">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.01176470588" green="0.12941176469999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="d9p-w5-zGL">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -120,7 +121,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.01176470588" green="0.12941176469999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="zD4-QV-ot8" secondAttribute="bottom" constant="8" id="3ZR-Sb-JGN"/>
                                 <constraint firstItem="zD4-QV-ot8" firstAttribute="leading" secondItem="d9p-w5-zGL" secondAttribute="leading" constant="8" id="HPr-QI-skl"/>
@@ -240,7 +241,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UWR-Dy-hPp">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UWR-Dy-hPp">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
                                 </imageView>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UTU-CM-FkW">
@@ -253,7 +254,7 @@
                                         <segment title="Twitter"/>
                                         <segment title="Info"/>
                                     </segments>
-                                    <color key="tintColor" red="0.9137254901960784" green="0.0" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.99607843139999996" green="0.78039215689999997" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </segmentedControl>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cV-2Q-ndm">
                                     <rect key="frame" x="0.0" y="117" width="320" height="55"/>
