@@ -37,20 +37,17 @@
 }
 
 - (void)loadCurrentTVShows {
+    [self loadTVShowForSenderID: @"760289"];
+}
+
+- (void)loadTVShowForSenderID:(NSString *)senderId {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
     NSString * dateTimeCurrent = [dateFormatter stringFromDate: [NSDate date]];
-    
-    NSDictionary * filterPara = @{@"criteria": @[ @{@"term":@"publishedStartDateTime",@"operator":@"atLeast",@"value": dateTimeCurrent},@{@"term":@"publishedStartDateTime",@"operator":@"atMost",@"value": dateTimeCurrent},@{@"term":@"sourceId",@"operator":@"in",@"value": @[@760289, @751048, @751045]}],@"operator":@"and"};
-    NSDictionary * paras = @{
-                             @"filter": filterPara,
-                             @"numberOfResults": @"100",
-                             @"api_key": @"240e4458fc4c6ac85c290481646b21ef"
-                             };
-    
-    NSString * sevenHackApiURLRequest = @"http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter";
+    NSString * paras = [NSString stringWithFormat: @"{\"criteria\":[{\"term\":\"publishedStartDateTime\",\"operator\":\"atLeast\",\"value\":\"%@\"},{\"term\":\"sourceId\",\"operator\":\"in\",\"values\":[\"%@\"]}],\"operator\":\"and\"}", dateTimeCurrent, senderId];
+    NSString * masterURL = [NSString stringWithFormat: @"http://hack.api.uat.ebmsctogroup.com/stores-active/contentInstance/event/filter?numberOfResults=10&filter=%@&api_key=240e4458fc4c6ac85c290481646b21ef", [paras stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLUserAllowedCharacterSet]]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET: sevenHackApiURLRequest parameters: paras progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager GET: masterURL parameters: nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
         myTVShows = responseObject;
         [self.tableView reloadData];
@@ -69,9 +66,9 @@
 }
 
 - (IBAction)start:(id)sender {
-    samsungSearch = [Service search];
-    samsungSearch.delegate = self;
-    [samsungSearch start];
+    //samsungSearch = [Service search];
+    //samsungSearch.delegate = self;
+    //[samsungSearch start];
     
     [Service getByURI: @"http://10.100.105.182:8001/api/v2/" timeout:5.0 completionHandler:^(Service * _Nullable service, NSError * _Nullable error) {
         if(service) {
