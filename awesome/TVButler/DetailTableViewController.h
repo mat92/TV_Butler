@@ -12,6 +12,6 @@
     
 }
 
-@property NSString * tvShowName;
+@property NSDictionary * tvShow;
 
 @end

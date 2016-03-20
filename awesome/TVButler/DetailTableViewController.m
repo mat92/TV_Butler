@@ -7,23 +7,47 @@
 //
 
 #import "DetailTableViewController.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @interface DetailTableViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *tvShowHeaderImage;
+@property (weak, nonatomic) IBOutlet UILabel *tvShowTitle;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *tvContentSection;
+@property (weak, nonatomic) IBOutlet UILabel *tvShowSubTitle;
 
 @end
 
 @implementation DetailTableViewController
 
-@synthesize tvShowName;
+@synthesize tvShow;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSArray * titles = [tvShow objectForKey: @"searchableTitles"];
+    NSString * title = @"";
+    for(int i = 0; i < titles.count; i++) {
+        NSDictionary * curr = [titles objectAtIndex: i];
+        if([[curr objectForKey: @"type"] isEqualToString: @"main"]) {
+            // THIS ONE!
+            NSDictionary * value = [curr objectForKey: @"value"];
+            if([value objectForKey: @"DE"]) {
+                title = [value objectForKey: @"DE"];
+            }
+        }
+    }
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // Configure the cell...
+    _tvShowTitle.text = title;
+    _tvShowSubTitle.text = [tvShow objectForKey: @"sourceName"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSArray * images = [tvShow objectForKey: @"relatedMaterial"];
+    if(images.count > 0) {
+        [_tvShowHeaderImage setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

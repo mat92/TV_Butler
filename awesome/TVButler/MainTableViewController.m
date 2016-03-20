@@ -131,6 +131,8 @@
     if([message.event isEqualToString: @"availableChannels"]) {
         // YEP!
     }
+    
+    NSLog(@"%@ ] %@", message.event, message.data);
 }
 
 - (void)onDisconnect:(ChannelClient *)client error:(NSError *)error {
@@ -146,11 +148,11 @@
 {
     if (motion == UIEventSubtypeMotionShake)
     {
-        [self zapZap];
+        [self zapZapChannel];
     } 
 }
 
-- (void)zapZap {
+- (void)zapZapChannel {
     MagicZapZao * zapZap = [[MagicZapZao alloc] init];
     [zapZap getNextZap:^(NSString *zapToTVShow) {
         [awesomeApplication publishWithEvent: @"changeToChannel" message: zapToTVShow];
@@ -208,11 +210,11 @@
     
     NSArray * images = [currentTVShow objectForKey: @"relatedMaterial"];
     if(images.count > 0) {
-        [cell.imageView setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]]];
+        [cell.imageView setImageWithURL: [NSURL URLWithString: [[images objectAtIndex: 0] objectForKey: @"value"]] placeholderImage: [UIImage imageNamed: @"no_image"]];
     }
     
     cell.containerView.layer.cornerRadius = 5.0;
-    cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, cell.containerView.frame.size.height);
+    cell.progressView.frame = CGRectMake(0, 0, cell.containerView.frame.size.width * 0.4, 5.0);
     
     return cell;
 }
@@ -220,7 +222,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //
     DetailTableViewController * detailTableView = [self.storyboard instantiateViewControllerWithIdentifier: @"detailTableView"];
-    detailTableView.tvShowName = @"Law And Order";
+    detailTableView.tvShow = [myTVShows objectAtIndex: indexPath.row];
     [self.navigationController pushViewController: detailTableView animated: YES];
 }
 
