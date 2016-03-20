@@ -102,6 +102,7 @@
 }
 
 - (void)onServiceLost:(Service *)service {
+    _botStatus.image = [UIImage imageNamed: @"butler_logo"];
 }
 
 - (void)connectToTV:(Service *)service {
@@ -130,6 +131,10 @@
     if([message.event isEqualToString: @"availableChannels"]) {
         // YEP!
     }
+}
+
+- (void)onDisconnect:(ChannelClient *)client error:(NSError *)error {
+    _botStatus.image = [UIImage imageNamed: @"butler_white_logo"];
 }
 
 - (BOOL)canBecomeFirstResponder
