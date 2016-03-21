@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0043336E772F828D2F2E3890 /* libPods-TVButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1C0D0BF79F855A724608C /* libPods-TVButler.a */; };
+		DF5C13131C9D9F51003475E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13121C9D9F51003475E4 /* main.m */; };
+		DF5C13161C9D9F51003475E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13151C9D9F51003475E4 /* AppDelegate.m */; };
+		DF5C13191C9D9F51003475E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13181C9D9F51003475E4 /* ViewController.m */; };
+		DF5C131C1C9D9F51003475E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5C131A1C9D9F51003475E4 /* Main.storyboard */; };
+		DF5C131E1C9D9F51003475E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5C131D1C9D9F51003475E4 /* Assets.xcassets */; };
+		DF5C13211C9D9F51003475E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */; };
+		DF5C132E1C9DA540003475E4 /* YSLCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C132B1C9DA540003475E4 /* YSLCardView.m */; };
+		DF5C132F1C9DA540003475E4 /* YSLDraggableCardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */; };
+		DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */; };
+		DF5C13351C9DA630003475E4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13341C9DA630003475E4 /* CardView.m */; };
+		DF5C13381C9DB66E003475E4 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13371C9DB66E003475E4 /* MainTableViewController.m */; };
+		DF5C133E1C9DC2E3003475E4 /* SmartView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5C133D1C9DC2E3003475E4 /* SmartView.framework */; };
+		DF5C133F1C9DC2E3003475E4 /* SmartView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF5C133D1C9DC2E3003475E4 /* SmartView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF5C13441C9DCFD1003475E4 /* MagicZapZao.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13431C9DCFD1003475E4 /* MagicZapZao.m */; };
+		DF5C13481C9DE293003475E4 /* DevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */; };
+		DF5C134D1C9DFFF5003475E4 /* tvShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */; };
+		DF5C13501C9E24C9003475E4 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */; };
+		DFD404EA1C9E9ECA005B4261 /* pizzaHudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD404E91C9E9ECA005B4261 /* pizzaHudViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF5C13401C9DC2E3003475E4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF5C133F1C9DC2E3003475E4 /* SmartView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVButler/Pods-TVButler.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B1C0D0BF79F855A724608C /* libPods-TVButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B77733C6AA6AC93D94DE48 /* Pods-TVButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVButler/Pods-TVButler.release.xcconfig"; sourceTree = "<group>"; };
+		DF5C130E1C9D9F50003475E4 /* TVButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF5C13121C9D9F51003475E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF5C13141C9D9F51003475E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF5C13151C9D9F51003475E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF5C13171C9D9F51003475E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DF5C13181C9D9F51003475E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DF5C131B1C9D9F51003475E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF5C131D1C9D9F51003475E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF5C13201C9D9F51003475E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF5C13221C9D9F51003475E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF5C132A1C9DA540003475E4 /* YSLCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCardView.h; sourceTree = "<group>"; };
+		DF5C132B1C9DA540003475E4 /* YSLCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCardView.m; sourceTree = "<group>"; };
+		DF5C132C1C9DA540003475E4 /* YSLDraggableCardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLDraggableCardContainer.h; sourceTree = "<group>"; };
+		DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLDraggableCardContainer.m; sourceTree = "<group>"; };
+		DF5C13301C9DA56B003475E4 /* SetupInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupInterestsViewController.h; sourceTree = "<group>"; };
+		DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupInterestsViewController.m; sourceTree = "<group>"; };
+		DF5C13331C9DA630003475E4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		DF5C13341C9DA630003475E4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		DF5C13361C9DB66E003475E4 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		DF5C13371C9DB66E003475E4 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		DF5C133D1C9DC2E3003475E4 /* SmartView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartView.framework; sourceTree = "<group>"; };
+		DF5C13421C9DCFD1003475E4 /* MagicZapZao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicZapZao.h; sourceTree = "<group>"; };
+		DF5C13431C9DCFD1003475E4 /* MagicZapZao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicZapZao.m; sourceTree = "<group>"; };
+		DF5C13461C9DE293003475E4 /* DevicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesTableViewController.h; sourceTree = "<group>"; };
+		DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesTableViewController.m; sourceTree = "<group>"; };
+		DF5C134B1C9DFFF5003475E4 /* tvShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tvShowTableViewCell.h; sourceTree = "<group>"; };
+		DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tvShowTableViewCell.m; sourceTree = "<group>"; };
+		DF5C134E1C9E24C9003475E4 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		DFD404E81C9E9ECA005B4261 /* pizzaHudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pizzaHudViewController.h; sourceTree = "<group>"; };
+		DFD404E91C9E9ECA005B4261 /* pizzaHudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pizzaHudViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF5C130B1C9D9F50003475E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0043336E772F828D2F2E3890 /* libPods-TVButler.a in Frameworks */,
+				DF5C133E1C9DC2E3003475E4 /* SmartView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64A15B92671216E46A5B0657 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */,
+				C0B77733C6AA6AC93D94DE48 /* Pods-TVButler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4458C65658D2318DDF62221 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1C0D0BF79F855A724608C /* libPods-TVButler.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF5C13051C9D9F50003475E4 = {
+			isa = PBXGroup;
+			children = (
+				DF5C133D1C9DC2E3003475E4 /* SmartView.framework */,
+				DF5C13101C9D9F51003475E4 /* TVButler */,
+				DF5C130F1C9D9F50003475E4 /* Products */,
+				64A15B92671216E46A5B0657 /* Pods */,
+				C4458C65658D2318DDF62221 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DF5C130F1C9D9F50003475E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF5C130E1C9D9F50003475E4 /* TVButler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF5C13101C9D9F51003475E4 /* TVButler */ = {
+			isa = PBXGroup;
+			children = (
+				DFD404E71C9E9EB4005B4261 /* New Group */,
+				DF5C13141C9D9F51003475E4 /* AppDelegate.h */,
+				DF5C13151C9D9F51003475E4 /* AppDelegate.m */,
+				DF5C13171C9D9F51003475E4 /* ViewController.h */,
+				DF5C13181C9D9F51003475E4 /* ViewController.m */,
+				DF5C13301C9DA56B003475E4 /* SetupInterestsViewController.h */,
+				DF5C13311C9DA56B003475E4 /* SetupInterestsViewController.m */,
+				DF5C13361C9DB66E003475E4 /* MainTableViewController.h */,
+				DF5C13371C9DB66E003475E4 /* MainTableViewController.m */,
+				DF5C13461C9DE293003475E4 /* DevicesTableViewController.h */,
+				DF5C13471C9DE293003475E4 /* DevicesTableViewController.m */,
+				DF5C134E1C9E24C9003475E4 /* DetailTableViewController.h */,
+				DF5C134F1C9E24C9003475E4 /* DetailTableViewController.m */,
+				DF5C13421C9DCFD1003475E4 /* MagicZapZao.h */,
+				DF5C13431C9DCFD1003475E4 /* MagicZapZao.m */,
+				DFD404E81C9E9ECA005B4261 /* pizzaHudViewController.h */,
+				DFD404E91C9E9ECA005B4261 /* pizzaHudViewController.m */,
+				DF5C131A1C9D9F51003475E4 /* Main.storyboard */,
+				DF5C131D1C9D9F51003475E4 /* Assets.xcassets */,
+				DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */,
+				DF5C13221C9D9F51003475E4 /* Info.plist */,
+				DF5C13111C9D9F51003475E4 /* Supporting Files */,
+			);
+			path = TVButler;
+			sourceTree = "<group>";
+		};
+		DF5C13111C9D9F51003475E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF5C134A1C9DFFE7003475E4 /* Cells */,
+				DF5C13291C9DA540003475E4 /* YSLDraggableCardContainer */,
+				DF5C13121C9D9F51003475E4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF5C13291C9DA540003475E4 /* YSLDraggableCardContainer */ = {
+			isa = PBXGroup;
+			children = (
+				DF5C13331C9DA630003475E4 /* CardView.h */,
+				DF5C13341C9DA630003475E4 /* CardView.m */,
+				DF5C132A1C9DA540003475E4 /* YSLCardView.h */,
+				DF5C132B1C9DA540003475E4 /* YSLCardView.m */,
+				DF5C132C1C9DA540003475E4 /* YSLDraggableCardContainer.h */,
+				DF5C132D1C9DA540003475E4 /* YSLDraggableCardContainer.m */,
+			);
+			path = YSLDraggableCardContainer;
+			sourceTree = "<group>";
+		};
+		DF5C134A1C9DFFE7003475E4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DF5C134B1C9DFFF5003475E4 /* tvShowTableViewCell.h */,
+				DF5C134C1C9DFFF5003475E4 /* tvShowTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DFD404E71C9E9EB4005B4261 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF5C130D1C9D9F50003475E4 /* TVButler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF5C13251C9D9F51003475E4 /* Build configuration list for PBXNativeTarget "TVButler" */;
+			buildPhases = (
+				75416E7E1F314EFA4FD3AFE1 /* Check Pods Manifest.lock */,
+				DF5C130A1C9D9F50003475E4 /* Sources */,
+				DF5C130B1C9D9F50003475E4 /* Frameworks */,
+				DF5C130C1C9D9F50003475E4 /* Resources */,
+				964DE2E50F7822BC8279E81E /* Copy Pods Resources */,
+				DF5C13401C9DC2E3003475E4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVButler;
+			productName = TVButler;
+			productReference = DF5C130E1C9D9F50003475E4 /* TVButler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF5C13061C9D9F50003475E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = TVButler;
+				TargetAttributes = {
+					DF5C130D1C9D9F50003475E4 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = DF5C13091C9D9F50003475E4 /* Build configuration list for PBXProject "TVButler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF5C13051C9D9F50003475E4;
+			productRefGroup = DF5C130F1C9D9F50003475E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF5C130D1C9D9F50003475E4 /* TVButler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF5C130C1C9D9F50003475E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF5C13211C9D9F51003475E4 /* LaunchScreen.storyboard in Resources */,
+				DF5C131E1C9D9F51003475E4 /* Assets.xcassets in Resources */,
+				DF5C131C1C9D9F51003475E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75416E7E1F314EFA4FD3AFE1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		964DE2E50F7822BC8279E81E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVButler/Pods-TVButler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF5C130A1C9D9F50003475E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF5C13501C9E24C9003475E4 /* DetailTableViewController.m in Sources */,
+				DF5C13381C9DB66E003475E4 /* MainTableViewController.m in Sources */,
+				DF5C13191C9D9F51003475E4 /* ViewController.m in Sources */,
+				DF5C132E1C9DA540003475E4 /* YSLCardView.m in Sources */,
+				DF5C13481C9DE293003475E4 /* DevicesTableViewController.m in Sources */,
+				DF5C134D1C9DFFF5003475E4 /* tvShowTableViewCell.m in Sources */,
+				DF5C13321C9DA56B003475E4 /* SetupInterestsViewController.m in Sources */,
+				DF5C13161C9D9F51003475E4 /* AppDelegate.m in Sources */,
+				DF5C13441C9DCFD1003475E4 /* MagicZapZao.m in Sources */,
+				DF5C132F1C9DA540003475E4 /* YSLDraggableCardContainer.m in Sources */,
+				DF5C13131C9D9F51003475E4 /* main.m in Sources */,
+				DFD404EA1C9E9ECA005B4261 /* pizzaHudViewController.m in Sources */,
+				DF5C13351C9DA630003475E4 /* CardView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DF5C131A1C9D9F51003475E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF5C131B1C9D9F51003475E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF5C131F1C9D9F51003475E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF5C13201C9D9F51003475E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF5C13231C9D9F51003475E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF5C13241C9D9F51003475E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF5C13261C9D9F51003475E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6191417D19409638054B1131 /* Pods-TVButler.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = TVButler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = at.appwerkstatt.tvbuddy.TVButler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF5C13271C9D9F51003475E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B77733C6AA6AC93D94DE48 /* Pods-TVButler.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = TVButler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = at.appwerkstatt.tvbuddy.TVButler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF5C13091C9D9F50003475E4 /* Build configuration list for PBXProject "TVButler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF5C13231C9D9F51003475E4 /* Debug */,
+				DF5C13241C9D9F51003475E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF5C13251C9D9F51003475E4 /* Build configuration list for PBXNativeTarget "TVButler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF5C13261C9D9F51003475E4 /* Debug */,
+				DF5C13271C9D9F51003475E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF5C13061C9D9F50003475E4 /* Project object */;
+}
