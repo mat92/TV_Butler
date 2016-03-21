@@ -7,25 +7,25 @@ var checkTime;
  *            msg - Message to log.
  */
 function log(msg) {
-	var logsEl = document.getElementById('logs');
+	//var logsEl = document.getElementById('logs');
 
 	if (msg) {
 		// Update logs
 		console.log('[MultiScreen]: ', msg);
-		logsEl.innerHTML += msg + '<br />';
+		//logsEl.innerHTML += msg + '<br />';
 	} else {
 		// Clear logs
-		logsEl.innerHTML = '';
+		//logsEl.innerHTML = '';
 	}
 
-	logsEl.scrollTop = logsEl.scrollHeight;
+	//logsEl.scrollTop = logsEl.scrollHeight;*/
 }
 
 /**
  * Register keys used in this application
  */
 function registerKeys() {
-	var usedKeys = [ '0' ];
+	var usedKeys = [ '0', "ChannelUp", "ChannelDown" ];
 
 	usedKeys.forEach(function(keyName) {
 		tizen.tvinputdevice.registerKey(keyName);
@@ -60,6 +60,15 @@ function registerKeyHandler() {
 		// Key Return
 		case 10009:
 			tizen.application.getCurrentApplication().exit();
+			break;
+		case 427:
+			console.log("button program UP pressed!");
+			tuneCrapChannel();
+			break;
+		case 428:
+			console.log("button program DOWN pressed!");
+			//tuneCrapChannel();
+			tuneCrapChannel();
 			break;
 		}
 	});
@@ -152,7 +161,7 @@ window.onload = function() {
 		channel.on('clientConnect', function(client) {
 			// Send the new client a message
 			channel
-					.publish('say', 'Hello ' + client.attributes.name,
+					.publish('say', 'Hello ' + client.attributes.avatarUrl,
 							client.id);
 			log("Let's welcome a new client: " + client.attributes.name);
 
@@ -160,8 +169,44 @@ window.onload = function() {
 		});
 
 		channel.on('changeToChannel', function(msg, from) {
-			tuneUp();
+			var titleh1 = document.getElementById("title");
+			titleh1.innerHTML = "Zapped to " + getCurrentChannel().channelName;
+			
+			$('#avatarContainer').css("bottom", "-200px");
+			$('#avatarName').text(from.attributes.name);
+			$('#avatarImage').css("background-image", "url('" + from.attributes.avatarUrl + "')");
+			
+			$('.fadeAnimation').fadeToggle();
+			$('#avatarContainer').stop().animate({ bottom:'+=250px' }, {easing: 'swing', duration: 1000, complete:  function() {
+				
+				$(this).delay(1000).queue(function() {
+
+					$('#avatarContainer').stop().animate({ bottom:'-=250px' }, {easing: 'swing', duration: 1000, complete:  function() {
+					} } );
+
+					$('.fadeAnimation').fadeToggle();
+					
+				     $(this).dequeue();
+
+				  });
+				
+				
+			} } );
+			
+			//tuneAwesomeChannel(msg);
+			if(msg === "pro7") {
+				tuneChannel("Pro7"); //TODO: change name to correct pro7
+			}
+			else {
+				tuneAwesomeChannel();
+			}
 		});
+		
+		channel.on('awesomePizzaSnow', function(msg, from) {
+			$(document).snow({ SnowImage: "images/pizza.png" });
+		});
+		
+		//fernbedienung -> schlechte sender
 		
 		// Add a listener for when a client disconnects
 		channel.on('clientDisconnect',
@@ -177,13 +222,17 @@ window.onload = function() {
 		// Tell clients what channel is running
 		function broadcast() {
 			var clength = channel.clients.length;
-			for (var i = 0; i < clength; i++) {
+			/*for (var i = 0; i < clength; i++) {
 				channel.publish('say', getCurrentChannel().channelName,
 						channel.clients[i].id);
-			}
+			}*/
 		}
 		var interval = setInterval(broadcast, 5000);
 	});
+	
+	getChannels();
+
+	$('.fadeAnimation').fadeOut(1);
 }
 
 function startTime() {
@@ -213,6 +262,7 @@ var tuneCB = {
 	}
 };
 
+var channelList = new Array();
 function channelCB(channels) {
 	console.log("getting channels is successful. " + channels.length
 			+ " channels are retreived.");
@@ -221,6 +271,8 @@ function channelCB(channels) {
 		return;
 	}
 
+	channelList = channels;
+	
 	var channelDiv = document.getElementById("channelList");
 	for (i = 0; i < channels.length; i++) {
 		var p = document.createElement("p");
@@ -284,15 +336,90 @@ function printCurrentChannel() {
 	}
 }
 
-var tuneCB = {
-	onsuccess : function() {
-		console.log("tuneUp() is successfully done. And there is a signal.");
-	},
-	onnosignal : function() {
-		console.log("tuneUp() is successfully done. But there is no signal.");
-	}
-};
+
 
 function tuneUp() {
 	tizen.tvchannel.tuneUp(tuneCB, null, "ALL");
+}
+/*
+ * "HbbTV Service 1", "Metaverse",
+ * "HbbTV Service 2",
+ */
+var awesomeChannels = new Array( "Pro7", "Kabel 1", "Sat.1","Sat1 Emotions");
+var crapChannels = new Array( "RTL", "Super RTL", "Comedy Channel", "HbbTV Service 1", "HbbTV Service 2", "Metaverse");
+var lovelyChannels = new Array("Something");
+
+function tuneChannel(name) {
+	var channelInfo = getChannelInfoForName(name);
+	if(channelInfo != null && channelInfo != getCurrentChannel()) {
+		try {
+			tizen.tvchannel.tune({major: channelInfo.major}, tuneCB, errorCB);
+		} catch(error) {
+	        console.log("Error name = "+ error.name + ", Error message = " + error.message);
+	    }
+	}
+}
+
+var awesomeChannelIndex = 0;
+function tuneAwesomeChannel() {
+	if(awesomeChannelIndex < awesomeChannels.length - 1) {
+		awesomeChannelIndex++;
+	}
+	else {
+		awesomeChannelIndex = 0;
+	}
+	
+	tuneChannel(awesomeChannels[awesomeChannelIndex]);
+	/*var channelInfo = getChannelInfoForName(awesomeChannels[awesomeChannelIndex]);
+	if(channelInfo != null && channelInfo != getCurrentChannel()) {
+		try {
+			tizen.tvchannel.tune({major: channelInfo.major}, tuneCB, errorCB);
+		} catch(error) {
+	        console.log("Error name = "+ error.name + ", Error message = " + error.message);
+	    }
+	}*/
+}
+
+var crapChannelIndex = 0;
+function tuneCrapChannel() {
+	if(crapChannelIndex < crapChannels.length - 1) {
+		crapChannelIndex++;
+	}
+	else {
+		crapChannelIndex = 0;
+	}
+	
+	tuneChannel(crapChannels[crapChannelIndex]);
+	
+	
+	var titleh1 = document.getElementById("title");
+	titleh1.innerHTML = "" + getCurrentChannel().channelName;
+	
+	$('.fadeAnimation').fadeToggle();
+	$(this).delay(1000).queue(function() {
+
+
+		$('.fadeAnimation').fadeToggle();
+		
+	     $(this).dequeue();
+
+	  });
+	
+	/*var channelInfo = getChannelInfoForName(crapChannels[crapChannelIndex]);
+	if(channelInfo != null && channelInfo != getCurrentChannel()) {
+		try {
+			tizen.tvchannel.tune({major: channelInfo.major}, tuneCB, errorCB);
+		} catch(error) {
+	         console.log("Error name = "+ error.name + ", Error message = " + error.message);
+	     }
+	}*/
+}
+
+function getChannelInfoForName(name) {
+	for(i = 0; i < channelList.length; i++) {
+		if(name.toLowerCase() === channelList[i].channelName.toLowerCase()) {
+			return channelList[i];
+		}
+	}
+	return null;
 }

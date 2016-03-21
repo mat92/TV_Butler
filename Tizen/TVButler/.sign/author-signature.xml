@@ -8,11 +8,15 @@
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>kjMYXG0eEHDJGBu9FFONINXqQsUB9ZD7gGyWyAQi1VA=</DigestValue>
+<DigestValue>nyYzjsaBbWi5VWCm182P9+XMYqtFMvXTaEWL+ft8Wk0=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=</DigestValue>
+</Reference>
+<Reference URI="images%2Fpizza.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>ULIMeI3ISZBPNe3ON3F6efjGnE+l0TYQkFMHYyPUsvQ=</DigestValue>
 </Reference>
 <Reference URI="images%2Ftizen_32.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -20,15 +24,23 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Jt3ELGx0cEZ5jcf7RLGxxBrLbvl1SEGenb0CnSR8UNA=</DigestValue>
+<DigestValue>G8drKvVvXfiITzTiNoYHWpMWH5TM/dbwzbjEaYTr+Bs=</DigestValue>
+</Reference>
+<Reference URI="js%2Fjquery-2.2.2.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ccRLsk/4vdMs3Pc2NEOTcRsfPRcUWOCV99RBiPjaZXY=</DigestValue>
+<DigestValue>37haIZLVMofSQTtcFxGztfkSfi3ErDxbpi4AUyjUY1Y=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmsf-2.0.21.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>FOCh8xgXF9W+eC+hbD7oER/ZUTp+PMhtwKxy1UJhFrI=</DigestValue>
+</Reference>
+<Reference URI="js%2Fsnow.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>08gtWdhFL4Gd/1Uw4GrZsc9zA7iC29VjX6GkxmXZImU=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -39,11 +51,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Xiu0jWzo6g6y//jiNTfodzMq1MJUxVXKjvwc6DMGXyg6cU91H/kfP9frseJRFH7Zj2q1Gokhnl/Y
-f6dd2Kj5TmcA/P32ZF7YAyMdhe6uX3b6R9frTNLuejZnlt/dSAzUtBEzYzjTIz0ZO/fUoB/2ATNf
-UB8lN+pfdTdSIxrHVV4w67G84HlHSsaK8DLGXhYXd/TJSJzkRcJ0XXcKhVBDMDHuvkoDSXmfbg1i
-Uo0aHPPu6IvQXWwvYOlDAK4aGZVGYPBDa18b+zyRF1ZPNuxg+9aqdGAEGVhI1Hh1FkLrjZKgGtMa
-Rxn76E9aH8sBU/io6QS3bXdvcwf1ioaiHrITpg==
+bjyXX8flsJjtMvVK55b9VvkXPEDtSB5zh3fPW6E/l7F63aR6NWtJwKtCHRMjiV51r13Zr8wmu8p3
+Z2ZvRto9XKM4J5TfgLG6ZtqSVzL2hgtkPh4Djc5Zo4T/DMVpnlHzCErOqQSZYJDsiPuzULfUrXMm
+ik8v3SUFPxH2epE0K4H/X193TZLMo+T1I+mUpQaj6e5oZVUXxB3glzj9mOf+TWSJe0a2iyh90HOD
+sFKGs7KqqMe1DdvBjxbosE49IORA3T1EAsUy7ejxxht0lZw+rCj6V97UEf+53OAFEW4dxh5krX5J
+xgMjTfbTMatzMjJnckurToZDXQC7xklsoosaxQ==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

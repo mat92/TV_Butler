@@ -3435,3 +3435,1978 @@ java.lang.Exception: Failed to get a device's profile version
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 07:53:36.638
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 07:53:49.471
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 07:53:59.131
+!MESSAGE [2016.03.20 07:53:59][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ÷, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 07:59:21.652
+!MESSAGE [2016.03.20 07:59:21][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown, profile: unknown                      p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:06:54.902
+!MESSAGE [2016.03.20 08:06:54][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ê-, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:08:54.996
+!MESSAGE [2016.03.20 08:08:54][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     F, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:10:28.622
+!MESSAGE [2016.03.20 08:10:28][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ôM, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:11:21.583
+!MESSAGE [2016.03.20 08:11:21][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ¾S, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:12:15.179
+!MESSAGE [2016.03.20 08:12:15][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     XW, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:14:04.376
+!MESSAGE [2016.03.20 08:14:04][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     Z, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:14:23.210
+!MESSAGE [2016.03.20 08:14:23][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     a, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:26:59.636
+!MESSAGE [2016.03.20 08:26:59][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown <´ `µ± ¸ SYNC± Üú8¾ê  `µ    ø· `µ   SYNC, profile: unknown¾   Lì     `µSYNCTø  ± Àð              æ ´ñ ´ñ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:28:44.066
+!MESSAGE [2016.03.20 08:28:44][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ¡, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:29:10.537
+!MESSAGE [2016.03.20 08:29:10][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ö, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:33:52.936
+!MESSAGE [2016.03.20 08:33:52][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     è, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:37:23.270
+!MESSAGE [2016.03.20 08:37:23][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ®,, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:39:49.361
+!MESSAGE [2016.03.20 08:39:49][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     -9, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-20 08:39:55.123
+!MESSAGE step SDB shell handle failed
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle 'mkdir -p /opt/usr/apps/tmp' command` operation
+ (Return Code:31)sdb command rejected exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:170)
+	at org.tizen.web.zimlaunch.step.TransferStep.executeStep(TransferStep.java:103)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:40:18.493
+!MESSAGE [2016.03.20 08:40:18][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     A, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:45:37.519
+!MESSAGE [2016.03.20 08:45:37][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     XC, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:47:13.528
+!MESSAGE [2016.03.20 08:47:13][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     V, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:58:54.111
+!MESSAGE [2016.03.20 08:58:54][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     õ[, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 08:59:28.914
+!MESSAGE [2016.03.20 08:59:28][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     X, profile: unknown ´ Xæ8¾Xê8¾        p.¶                            ÿ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:00:29.009
+!MESSAGE [2016.03.20 09:00:29][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     , profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:09:13.809
+!MESSAGE [2016.03.20 09:09:13][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (null) 
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:576)
+	at org.tizen.sdblib.PlatformInfo.<init>(PlatformInfo.java:60)
+	at org.tizen.sdblib.Device.getPlatformInfo(Device.java:763)
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:325)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 09:09:13.922
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-20 09:09:14.024
+!MESSAGE 
+!STACK 0
+org.tizen.web.zimlaunch.exception.NoConnectedDeviceException
+	at org.tizen.web.zimlaunch.util.ConnectionUtil.getSelectedDevice(ConnectionUtil.java:80)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:245)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 09:09:24.263
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:09:26.911
+!MESSAGE [2016.03.20 09:09:26][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ]-, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:16:01.179
+!MESSAGE [2016.03.20 09:16:01][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ²b, profile: unknown ´ Xæ8¾Xê8¾        p.¶                            ÿ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:17:21.470
+!MESSAGE [2016.03.20 09:17:21][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ÖC, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:19:33.360
+!MESSAGE [2016.03.20 09:19:33][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     äH, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:20:49.243
+!MESSAGE [2016.03.20 09:20:49][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ­P, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:24:14.835
+!MESSAGE [2016.03.20 09:24:14][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     _U, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:28:29.007
+!MESSAGE [2016.03.20 09:28:29][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     a, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:31:48.108
+!MESSAGE [2016.03.20 09:31:48][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     Io, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:36:13.114
+!MESSAGE [2016.03.20 09:36:13][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown <´ `µ± ¸ SYNC± Üú8¾ê  `µ    ø· `µ   SYNC, profile: unknown¾   Lì     `µSYNCTø  ± Àð              æ ´ñ ´ñ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:40:00.789
+!MESSAGE [2016.03.20 09:40:00][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ¸, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:42:30.791
+!MESSAGE [2016.03.20 09:42:30][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ^, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:43:16.749
+!MESSAGE [2016.03.20 09:43:16][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     §#, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:44:38.253
+!MESSAGE [2016.03.20 09:44:38][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     «&, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 09:45:53.420
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 09:51:48.373
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:51:50.752
+!MESSAGE [2016.03.20 09:51:50][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     æA, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:52:24.325
+!MESSAGE [2016.03.20 09:52:24][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     þO, profile: unknown ´ Xæ8¾Xê8¾        p.¶                            ÿ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:55:51.311
+!MESSAGE [2016.03.20 09:55:51][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     *E, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:57:52.719
+!MESSAGE [2016.03.20 09:57:52][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     XQ, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:58:47.640
+!MESSAGE [2016.03.20 09:58:47][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     0X, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 09:59:15.846
+!MESSAGE [2016.03.20 09:59:15][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     [, profile: unknown ´ Xæ8¾Xê8¾        p.¶                            ÿ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:07:43.826
+!MESSAGE [2016.03.20 10:07:43][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     w], profile: unknown ´ Xæ8¾Xê8¾        p.¶                            ÿ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:09:06.864
+!MESSAGE [2016.03.20 10:09:06][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     åz, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 10:12:09.997
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 10:13:52.853
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 10:13:53.089
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.jface 2 0 2016-03-20 10:13:56.695
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-20 10:13:56.695
+!MESSAGE A conflict occurred for F2:
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@373052b5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.showInformation,Show Tooltip Description,
+		Displays information for the current caret location in a focused hover,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57e35a5f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.tizen.common.connection.rename,Rename,
+		Rename a file or folder on the connected target,
+		Category(org.tizen.common.connection.category,Connection Explorer,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7585ec56,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.tizen.common.connection.rename.context,,,system)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:14:42.711
+!MESSAGE [2016.03.20 10:14:42][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     , profile: unknown ´ æ8¾Xê8¾        p.¶                    ") 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:18:25.299
+!MESSAGE [2016.03.20 10:18:25][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown, profile: unknown) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:19:05.414
+!MESSAGE [2016.03.20 10:19:05][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     +", profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:22:08.590
+!MESSAGE [2016.03.20 10:22:08][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ¾$, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:36:43.878
+!MESSAGE [2016.03.20 10:36:43][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     £., profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:40:04.798
+!MESSAGE [2016.03.20 10:40:04][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     î`, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:40:20.578
+!MESSAGE [2016.03.20 10:40:20][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     Êk, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:40:56.898
+!MESSAGE [2016.03.20 10:40:56][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown, profile: unknown) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-20 10:40:57.682
+!MESSAGE Could not launch the TVButler application because the TVButler application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the TVButler application because the TVButler application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-20 10:40:57.682
+!MESSAGE Could not launch the TVButler application because the TVButler application is currently in launch.
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:41:13.488
+!MESSAGE [2016.03.20 10:41:13][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     o, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:42:04.546
+!MESSAGE [2016.03.20 10:42:04][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ¯p, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:42:56.534
+!MESSAGE [2016.03.20 10:42:56][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ¢s, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:45:02.627
+!MESSAGE [2016.03.20 10:45:02][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     w, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:45:25.558
+!MESSAGE [2016.03.20 10:45:25][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     v~, profile: unknown ´ Xæ8¾Xê8¾        p.¶                    #        ÿ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:47:29.884
+!MESSAGE [2016.03.20 10:47:29][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     b, profile: unknown ´ æ8¾Xê8¾        p.¶                    #) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 10:47:46.555
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 10:48:28.464
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:48:30.854
+!MESSAGE [2016.03.20 10:48:30][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú, profile: unknown ´ æ8¾Xê8¾        p.¶                    ') 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:54:04.734
+!MESSAGE [2016.03.20 10:54:04][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown <´ `µ± ¸ SYNC± Üú8¾ê  `µ    ø· `µ   SYNC, profile: unknown¾   Lì     `µSYNCTø  ± Àð              æ ´ñ ´ñ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:57:35.325
+!MESSAGE [2016.03.20 10:57:35][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     H", profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:58:12.420
+!MESSAGE [2016.03.20 10:58:12][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     ., profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 10:59:01.492
+!MESSAGE [2016.03.20 10:59:01][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸         æ ò pò ôú     x0, profile: unknown ´ æ8¾Xê8¾        p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:04:01.409
+!MESSAGE [2016.03.20 11:04:01][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (null) 
+
+!STACK 0
+org.tizen.sdblib.exception.TimeoutException
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:415)
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:377)
+	at org.tizen.sdblib.SdbHelper.readSdbResponse(SdbHelper.java:224)
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:573)
+	at org.tizen.sdblib.PlatformInfo.<init>(PlatformInfo.java:60)
+	at org.tizen.sdblib.Device.getPlatformInfo(Device.java:763)
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:325)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-20 11:04:11.849
+!MESSAGE There is no response while 300 seconds. Please retry again.
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle 'ls /usr/bin/xwalk-launcher > /tmp/matthias.deployer 2>&1; echo $? ' command` operation
+ (Return Code:30)sdb timeout exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:166)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.checkWRTType(CommandLauncher.java:265)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.isInstalled(CommandLauncher.java:280)
+	at org.tizen.web.zimlaunch.step.InitLaunchStep.executeStep(InitLaunchStep.java:206)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunch(ZimLaunchDelegate.java:218)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:254)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:04:23.139
+!MESSAGE [2016.03.20 11:04:23][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (null) 
+
+!STACK 0
+org.tizen.sdblib.exception.TimeoutException
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:415)
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:377)
+	at org.tizen.sdblib.SdbHelper.readSdbResponse(SdbHelper.java:224)
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:573)
+	at org.tizen.sdblib.PlatformInfo.<init>(PlatformInfo.java:60)
+	at org.tizen.sdblib.Device.getPlatformInfo(Device.java:763)
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:325)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-20 11:04:33.425
+!MESSAGE There is no response while 300 seconds. Please retry again.
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle 'ls /usr/bin/xwalk-launcher > /tmp/matthias.deployer 2>&1; echo $? ' command` operation
+ (Return Code:30)sdb timeout exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:166)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.checkWRTType(CommandLauncher.java:265)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.isInstalled(CommandLauncher.java:280)
+	at org.tizen.web.zimlaunch.step.InitLaunchStep.executeStep(InitLaunchStep.java:206)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunch(ZimLaunchDelegate.java:218)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:254)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:04:50.463
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:07:51.308
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:07:54.901
+!MESSAGE [2016.03.20 11:07:54][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸ Üú8¾ê  æ ò pò ôú     N, profile: unknown ´ æ8¾Xê8¾        p.¶± Àð                 ´ñ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:08:57.931
+!MESSAGE [2016.03.20 11:08:57][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶ä     c   o   w   |   Tr.¶pµæ ò ñ ìò ø· ðµ, profile: unknown Äú8¾Üú8¾   Lì      ðµ± Àð              ò ¤ñ  õ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:10:25.982
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:14:45.409
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:14:51.094
+!MESSAGE [2016.03.20 11:14:51][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `½/¶@ ¸ Tr.¶àµæ ò pò ôú ø· Bc, profile: unknown ´ æ8¾Xê8¾        p.¶± Àð              (   ¤ñ) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:21:21.940
+!MESSAGE [2016.03.20 11:21:21][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown, profile: unknown                      p.¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:25:29.475
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:44:51.253
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 11:44:57.839
+!MESSAGE [2016.03.20 11:44:57][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `-&¶@ ¸         æ ò pò ôú     S%, profile: unknown ´ FÎ½XJÎ½        à$¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 11:51:28.958
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 14:05:45.864
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 38 more
+
+!ENTRY org.eclipse.ui 4 0 2016-03-20 14:05:46.112
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3976)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1681)
+	at org.tizen.common.cert.ui.DuidListTray$4.run(DuidListTray.java:259)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.tizen.common.core.application.ProfileInfo 4 0 2016-03-20 14:05:54.162
+!MESSAGE [2016.03.20 14:05:54][ERROR] ProfileInfo.java(342) - Failed to get a device information from '10.100.105.182:26101' (model: UJU6510, platform: Tizen, version: unknown¶         `Ý0¶@ ¸         æ ò pò ôú     ¢, profile: unknown ´ fÑ½XjÑ½        /¶) 
+
+!STACK 0
+java.lang.Exception: Failed to get a device's profile version
+	at org.tizen.common.core.application.ProfileInfo.getProfileInfo(ProfileInfo.java:329)
+	at org.tizen.common.util.LaunchUtil.checkProfile(LaunchUtil.java:153)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunchCheck(ZimLaunchDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:813)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
